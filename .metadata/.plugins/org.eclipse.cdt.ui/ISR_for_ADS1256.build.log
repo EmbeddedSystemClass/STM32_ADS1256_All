@@ -1,0 +1,10 @@
+17:06:12 **** Incremental Build of configuration Debug for project ISR_for_ADS1256 ****
+make all 
+arm-none-eabi-size   ISR_for_ADS1256.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6988	     28	  13748	  20764	   511c	ISR_for_ADS1256.elf
+Finished building: default.size.stdout
+ 
+
+17:06:30 Build Finished. 0 errors, 0 warnings. (took 17s.741ms)
+

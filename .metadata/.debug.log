@@ -1,0 +1,397 @@
+2019-06-13 17:29:54,409 [DEBUG] SingleClientConnManager:210 - Get connection for route {}->http://umcproxy.umc.com:8080->http://sw-center.st.com:80
+2019-06-13 17:29:54,429 [DEBUG] DefaultClientConnectionOperator:177 - Connecting to umcproxy.umc.com:8080
+2019-06-13 17:29:54,519 [DEBUG] RequestAddCookies:123 - CookieSpec selected: default
+2019-06-13 17:29:54,519 [DEBUG] RequestAuthCache:77 - Auth cache not set in the context
+2019-06-13 17:29:54,519 [DEBUG] RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2019-06-13 17:29:54,519 [DEBUG] RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-06-13 17:29:54,519 [DEBUG] SNIAwareHttpClient:682 - Attempt 1 to execute request
+2019-06-13 17:29:54,529 [DEBUG] DefaultClientConnection:274 - Sending request: GET http://sw-center.st.com/stm32cubeide/updatesite1/p2.index HTTP/1.1
+2019-06-13 17:29:54,529 [DEBUG] wire:73 -  >> "GET http://sw-center.st.com/stm32cubeide/updatesite1/p2.index HTTP/1.1[\r][\n]"
+2019-06-13 17:29:54,529 [DEBUG] wire:73 -  >> "Cache-Control: max-age=0[\r][\n]"
+2019-06-13 17:29:54,529 [DEBUG] wire:73 -  >> "User-Agent: p2/1.2.100.v20180822-1354 (Java 1.8.0_202-b08 AdoptOpenJdk; Windows7 6.1.0 x86-64; zh_TW) com.st.stm32cube.ide.mcu.rcp.product/unknownBuildId (org.eclipse.ui.ide.workbench)[\r][\n]"
+2019-06-13 17:29:54,529 [DEBUG] wire:73 -  >> "Host: sw-center.st.com[\r][\n]"
+2019-06-13 17:29:54,529 [DEBUG] wire:73 -  >> "Proxy-Connection: Keep-Alive[\r][\n]"
+2019-06-13 17:29:54,539 [DEBUG] wire:73 -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2019-06-13 17:29:54,539 [DEBUG] wire:73 -  >> "[\r][\n]"
+2019-06-13 17:29:54,539 [DEBUG] headers:278 - >> GET http://sw-center.st.com/stm32cubeide/updatesite1/p2.index HTTP/1.1
+2019-06-13 17:29:54,539 [DEBUG] headers:281 - >> Cache-Control: max-age=0
+2019-06-13 17:29:54,539 [DEBUG] headers:281 - >> User-Agent: p2/1.2.100.v20180822-1354 (Java 1.8.0_202-b08 AdoptOpenJdk; Windows7 6.1.0 x86-64; zh_TW) com.st.stm32cube.ide.mcu.rcp.product/unknownBuildId (org.eclipse.ui.ide.workbench)
+2019-06-13 17:29:54,539 [DEBUG] headers:281 - >> Host: sw-center.st.com
+2019-06-13 17:29:54,539 [DEBUG] headers:281 - >> Proxy-Connection: Keep-Alive
+2019-06-13 17:29:54,539 [DEBUG] headers:281 - >> Accept-Encoding: gzip,deflate
+2019-06-13 17:29:54,629 [DEBUG] wire:73 -  << "HTTP/1.1 407 Proxy Authentication Required[\r][\n]"
+2019-06-13 17:29:54,629 [DEBUG] wire:73 -  << "Proxy-Authenticate: NEGOTIATE[\r][\n]"
+2019-06-13 17:29:54,639 [DEBUG] wire:73 -  << "Proxy-Authenticate: NTLM[\r][\n]"
+2019-06-13 17:29:54,639 [DEBUG] wire:73 -  << "Proxy-Authenticate: BASIC realm="NTLM"[\r][\n]"
+2019-06-13 17:29:54,639 [DEBUG] wire:73 -  << "Cache-Control: no-cache[\r][\n]"
+2019-06-13 17:29:54,639 [DEBUG] wire:73 -  << "Pragma: no-cache[\r][\n]"
+2019-06-13 17:29:54,639 [DEBUG] wire:73 -  << "Content-Type: text/html; charset=utf-8[\r][\n]"
+2019-06-13 17:29:54,639 [DEBUG] wire:73 -  << "Proxy-Connection: close[\r][\n]"
+2019-06-13 17:29:54,639 [DEBUG] wire:73 -  << "Set-Cookie: BCSI-CS-2f9850a94980a151=2; Path=/[\r][\n]"
+2019-06-13 17:29:54,639 [DEBUG] wire:73 -  << "Connection: close[\r][\n]"
+2019-06-13 17:29:54,639 [DEBUG] wire:73 -  << "Content-Length: 1141[\r][\n]"
+2019-06-13 17:29:54,639 [DEBUG] wire:73 -  << "[\r][\n]"
+2019-06-13 17:29:54,639 [DEBUG] DefaultClientConnection:259 - Receiving response: HTTP/1.1 407 Proxy Authentication Required
+2019-06-13 17:29:54,639 [DEBUG] headers:262 - << HTTP/1.1 407 Proxy Authentication Required
+2019-06-13 17:29:54,639 [DEBUG] headers:265 - << Proxy-Authenticate: NEGOTIATE
+2019-06-13 17:29:54,649 [DEBUG] headers:265 - << Proxy-Authenticate: NTLM
+2019-06-13 17:29:54,649 [DEBUG] headers:265 - << Proxy-Authenticate: BASIC realm="NTLM"
+2019-06-13 17:29:54,649 [DEBUG] headers:265 - << Cache-Control: no-cache
+2019-06-13 17:29:54,649 [DEBUG] headers:265 - << Pragma: no-cache
+2019-06-13 17:29:54,659 [DEBUG] headers:265 - << Content-Type: text/html; charset=utf-8
+2019-06-13 17:29:54,659 [DEBUG] headers:265 - << Proxy-Connection: close
+2019-06-13 17:29:54,659 [DEBUG] headers:265 - << Set-Cookie: BCSI-CS-2f9850a94980a151=2; Path=/
+2019-06-13 17:29:54,659 [DEBUG] headers:265 - << Connection: close
+2019-06-13 17:29:54,659 [DEBUG] headers:265 - << Content-Length: 1141
+2019-06-13 17:29:54,669 [DEBUG] ResponseProcessCookies:119 - Cookie accepted [BCSI-CS-2f9850a94980a151="2", version:0, domain:sw-center.st.com, path:/, expiry:null]
+2019-06-13 17:29:54,669 [DEBUG] SNIAwareHttpClient:77 - Authentication required
+2019-06-13 17:29:54,669 [DEBUG] SNIAwareHttpClient:107 - umcproxy.umc.com:8080 requested authentication
+2019-06-13 17:29:54,669 [DEBUG] ProxyAuthenticationStrategy:175 - Authentication schemes in the order of preference: [NTLM, Digest, Basic]
+2019-06-13 17:29:54,929 [DEBUG] ProxyAuthenticationStrategy:203 - Challenge for Digest authentication scheme not available
+2019-06-13 17:29:54,939 [DEBUG] SingleClientConnManager:265 - Releasing connection org.apache.http.impl.conn.SingleClientConnManager$ConnAdapter@10fd7473
+2019-06-13 17:29:54,939 [DEBUG] SingleClientConnManager:282 - Released connection open but not reusable.
+2019-06-13 17:29:54,949 [DEBUG] DefaultClientConnection:164 - Connection 0.0.0.0:54618<->172.18.121.85:8080 shut down
+2019-06-13 17:29:55,029 [DEBUG] BasicClientConnectionManager:161 - Get connection for route {}->http://umcproxy.umc.com:8080->http://sw-center.st.com:80
+2019-06-13 17:29:55,039 [DEBUG] DefaultClientConnectionOperator:177 - Connecting to umcproxy.umc.com:8080
+2019-06-13 17:29:55,049 [DEBUG] RequestAddCookies:123 - CookieSpec selected: default
+2019-06-13 17:29:55,049 [DEBUG] RequestAuthCache:77 - Auth cache not set in the context
+2019-06-13 17:29:55,049 [DEBUG] RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2019-06-13 17:29:55,049 [DEBUG] RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-06-13 17:29:55,049 [DEBUG] SNIAwareHttpClient:682 - Attempt 1 to execute request
+2019-06-13 17:29:55,049 [DEBUG] DefaultClientConnection:274 - Sending request: HEAD http://sw-center.st.com/stm32cubeide/updatesite1/compositeContent.jar HTTP/1.1
+2019-06-13 17:29:55,049 [DEBUG] wire:73 -  >> "HEAD http://sw-center.st.com/stm32cubeide/updatesite1/compositeContent.jar HTTP/1.1[\r][\n]"
+2019-06-13 17:29:55,049 [DEBUG] wire:73 -  >> "Cache-Control: max-age=0[\r][\n]"
+2019-06-13 17:29:55,049 [DEBUG] wire:73 -  >> "Host: sw-center.st.com[\r][\n]"
+2019-06-13 17:29:55,049 [DEBUG] wire:73 -  >> "Proxy-Connection: Keep-Alive[\r][\n]"
+2019-06-13 17:29:55,059 [DEBUG] wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_202)[\r][\n]"
+2019-06-13 17:29:55,059 [DEBUG] wire:73 -  >> "[\r][\n]"
+2019-06-13 17:29:55,059 [DEBUG] headers:278 - >> HEAD http://sw-center.st.com/stm32cubeide/updatesite1/compositeContent.jar HTTP/1.1
+2019-06-13 17:29:55,059 [DEBUG] headers:281 - >> Cache-Control: max-age=0
+2019-06-13 17:29:55,059 [DEBUG] headers:281 - >> Host: sw-center.st.com
+2019-06-13 17:29:55,059 [DEBUG] headers:281 - >> Proxy-Connection: Keep-Alive
+2019-06-13 17:29:55,059 [DEBUG] headers:281 - >> User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_202)
+2019-06-13 17:29:55,069 [DEBUG] wire:73 -  << "HTTP/1.1 407 Proxy Authentication Required[\r][\n]"
+2019-06-13 17:29:55,069 [DEBUG] wire:73 -  << "Proxy-Authenticate: NEGOTIATE[\r][\n]"
+2019-06-13 17:29:55,069 [DEBUG] wire:73 -  << "Proxy-Authenticate: NTLM[\r][\n]"
+2019-06-13 17:29:55,069 [DEBUG] wire:73 -  << "Proxy-Authenticate: BASIC realm="NTLM"[\r][\n]"
+2019-06-13 17:29:55,069 [DEBUG] wire:73 -  << "Cache-Control: no-cache[\r][\n]"
+2019-06-13 17:29:55,069 [DEBUG] wire:73 -  << "Pragma: no-cache[\r][\n]"
+2019-06-13 17:29:55,079 [DEBUG] wire:73 -  << "Content-Type: text/html; charset=utf-8[\r][\n]"
+2019-06-13 17:29:55,079 [DEBUG] wire:73 -  << "Proxy-Connection: close[\r][\n]"
+2019-06-13 17:29:55,079 [DEBUG] wire:73 -  << "Set-Cookie: BCSI-CS-2f9850a94980a151=2; Path=/[\r][\n]"
+2019-06-13 17:29:55,079 [DEBUG] wire:73 -  << "Connection: close[\r][\n]"
+2019-06-13 17:29:55,079 [DEBUG] wire:73 -  << "Content-Length: 1153[\r][\n]"
+2019-06-13 17:29:55,079 [DEBUG] wire:73 -  << "[\r][\n]"
+2019-06-13 17:29:55,079 [DEBUG] DefaultClientConnection:259 - Receiving response: HTTP/1.1 407 Proxy Authentication Required
+2019-06-13 17:29:55,079 [DEBUG] headers:262 - << HTTP/1.1 407 Proxy Authentication Required
+2019-06-13 17:29:55,079 [DEBUG] headers:265 - << Proxy-Authenticate: NEGOTIATE
+2019-06-13 17:29:55,079 [DEBUG] headers:265 - << Proxy-Authenticate: NTLM
+2019-06-13 17:29:55,079 [DEBUG] headers:265 - << Proxy-Authenticate: BASIC realm="NTLM"
+2019-06-13 17:29:55,079 [DEBUG] headers:265 - << Cache-Control: no-cache
+2019-06-13 17:29:55,079 [DEBUG] headers:265 - << Pragma: no-cache
+2019-06-13 17:29:55,079 [DEBUG] headers:265 - << Content-Type: text/html; charset=utf-8
+2019-06-13 17:29:55,079 [DEBUG] headers:265 - << Proxy-Connection: close
+2019-06-13 17:29:55,079 [DEBUG] headers:265 - << Set-Cookie: BCSI-CS-2f9850a94980a151=2; Path=/
+2019-06-13 17:29:55,079 [DEBUG] headers:265 - << Connection: close
+2019-06-13 17:29:55,079 [DEBUG] headers:265 - << Content-Length: 1153
+2019-06-13 17:29:55,079 [DEBUG] ResponseProcessCookies:119 - Cookie accepted [BCSI-CS-2f9850a94980a151="2", version:0, domain:sw-center.st.com, path:/, expiry:null]
+2019-06-13 17:29:55,079 [DEBUG] SNIAwareHttpClient:77 - Authentication required
+2019-06-13 17:29:55,089 [DEBUG] SNIAwareHttpClient:107 - umcproxy.umc.com:8080 requested authentication
+2019-06-13 17:29:55,089 [DEBUG] ProxyAuthenticationStrategy:175 - Authentication schemes in the order of preference: [NTLM, Digest, Basic]
+2019-06-13 17:29:55,089 [DEBUG] ProxyAuthenticationStrategy:203 - Challenge for Digest authentication scheme not available
+2019-06-13 17:29:55,089 [DEBUG] BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@1a89fd06
+2019-06-13 17:29:55,089 [DEBUG] DefaultClientConnection:164 - Connection 0.0.0.0:54620<->172.18.121.85:8080 shut down
+2019-06-13 17:29:55,119 [DEBUG] BasicClientConnectionManager:161 - Get connection for route {}->http://umcproxy.umc.com:8080->http://sw-center.st.com:80
+2019-06-13 17:29:55,119 [DEBUG] DefaultClientConnectionOperator:177 - Connecting to umcproxy.umc.com:8080
+2019-06-13 17:29:55,129 [DEBUG] RequestAddCookies:123 - CookieSpec selected: default
+2019-06-13 17:29:55,139 [DEBUG] RequestAuthCache:77 - Auth cache not set in the context
+2019-06-13 17:29:55,139 [DEBUG] RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2019-06-13 17:29:55,139 [DEBUG] RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-06-13 17:29:55,139 [DEBUG] SNIAwareHttpClient:682 - Attempt 1 to execute request
+2019-06-13 17:29:55,139 [DEBUG] DefaultClientConnection:274 - Sending request: HEAD http://sw-center.st.com/stm32cubeide/updatesite1/compositeContent.xml HTTP/1.1
+2019-06-13 17:29:55,139 [DEBUG] wire:73 -  >> "HEAD http://sw-center.st.com/stm32cubeide/updatesite1/compositeContent.xml HTTP/1.1[\r][\n]"
+2019-06-13 17:29:55,139 [DEBUG] wire:73 -  >> "Cache-Control: max-age=0[\r][\n]"
+2019-06-13 17:29:55,139 [DEBUG] wire:73 -  >> "Host: sw-center.st.com[\r][\n]"
+2019-06-13 17:29:55,139 [DEBUG] wire:73 -  >> "Proxy-Connection: Keep-Alive[\r][\n]"
+2019-06-13 17:29:55,139 [DEBUG] wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_202)[\r][\n]"
+2019-06-13 17:29:55,139 [DEBUG] wire:73 -  >> "[\r][\n]"
+2019-06-13 17:29:55,139 [DEBUG] headers:278 - >> HEAD http://sw-center.st.com/stm32cubeide/updatesite1/compositeContent.xml HTTP/1.1
+2019-06-13 17:29:55,139 [DEBUG] headers:281 - >> Cache-Control: max-age=0
+2019-06-13 17:29:55,139 [DEBUG] headers:281 - >> Host: sw-center.st.com
+2019-06-13 17:29:55,139 [DEBUG] headers:281 - >> Proxy-Connection: Keep-Alive
+2019-06-13 17:29:55,139 [DEBUG] headers:281 - >> User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_202)
+2019-06-13 17:29:55,159 [DEBUG] wire:73 -  << "HTTP/1.1 407 Proxy Authentication Required[\r][\n]"
+2019-06-13 17:29:55,159 [DEBUG] wire:73 -  << "Proxy-Authenticate: NEGOTIATE[\r][\n]"
+2019-06-13 17:29:55,159 [DEBUG] wire:73 -  << "Proxy-Authenticate: NTLM[\r][\n]"
+2019-06-13 17:29:55,159 [DEBUG] wire:73 -  << "Proxy-Authenticate: BASIC realm="NTLM"[\r][\n]"
+2019-06-13 17:29:55,159 [DEBUG] wire:73 -  << "Cache-Control: no-cache[\r][\n]"
+2019-06-13 17:29:55,159 [DEBUG] wire:73 -  << "Pragma: no-cache[\r][\n]"
+2019-06-13 17:29:55,159 [DEBUG] wire:73 -  << "Content-Type: text/html; charset=utf-8[\r][\n]"
+2019-06-13 17:29:55,159 [DEBUG] wire:73 -  << "Proxy-Connection: close[\r][\n]"
+2019-06-13 17:29:55,159 [DEBUG] wire:73 -  << "Set-Cookie: BCSI-CS-2f9850a94980a151=2; Path=/[\r][\n]"
+2019-06-13 17:29:55,159 [DEBUG] wire:73 -  << "Connection: close[\r][\n]"
+2019-06-13 17:29:55,159 [DEBUG] wire:73 -  << "Content-Length: 1153[\r][\n]"
+2019-06-13 17:29:55,169 [DEBUG] wire:73 -  << "[\r][\n]"
+2019-06-13 17:29:55,169 [DEBUG] DefaultClientConnection:259 - Receiving response: HTTP/1.1 407 Proxy Authentication Required
+2019-06-13 17:29:55,169 [DEBUG] headers:262 - << HTTP/1.1 407 Proxy Authentication Required
+2019-06-13 17:29:55,169 [DEBUG] headers:265 - << Proxy-Authenticate: NEGOTIATE
+2019-06-13 17:29:55,169 [DEBUG] headers:265 - << Proxy-Authenticate: NTLM
+2019-06-13 17:29:55,169 [DEBUG] headers:265 - << Proxy-Authenticate: BASIC realm="NTLM"
+2019-06-13 17:29:55,169 [DEBUG] headers:265 - << Cache-Control: no-cache
+2019-06-13 17:29:55,169 [DEBUG] headers:265 - << Pragma: no-cache
+2019-06-13 17:29:55,169 [DEBUG] headers:265 - << Content-Type: text/html; charset=utf-8
+2019-06-13 17:29:55,169 [DEBUG] headers:265 - << Proxy-Connection: close
+2019-06-13 17:29:55,169 [DEBUG] headers:265 - << Set-Cookie: BCSI-CS-2f9850a94980a151=2; Path=/
+2019-06-13 17:29:55,169 [DEBUG] headers:265 - << Connection: close
+2019-06-13 17:29:55,169 [DEBUG] headers:265 - << Content-Length: 1153
+2019-06-13 17:29:55,169 [DEBUG] ResponseProcessCookies:119 - Cookie accepted [BCSI-CS-2f9850a94980a151="2", version:0, domain:sw-center.st.com, path:/, expiry:null]
+2019-06-13 17:29:55,169 [DEBUG] SNIAwareHttpClient:77 - Authentication required
+2019-06-13 17:29:55,169 [DEBUG] SNIAwareHttpClient:107 - umcproxy.umc.com:8080 requested authentication
+2019-06-13 17:29:55,169 [DEBUG] ProxyAuthenticationStrategy:175 - Authentication schemes in the order of preference: [NTLM, Digest, Basic]
+2019-06-13 17:29:55,169 [DEBUG] ProxyAuthenticationStrategy:203 - Challenge for Digest authentication scheme not available
+2019-06-13 17:29:55,169 [DEBUG] BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@11587ac9
+2019-06-13 17:29:55,169 [DEBUG] DefaultClientConnection:164 - Connection 0.0.0.0:54621<->172.18.121.85:8080 shut down
+2019-06-13 17:29:55,219 [DEBUG] SingleClientConnManager:210 - Get connection for route {tls}->http://umcproxy.umc.com:8080->https://download.eclipse.org:443
+2019-06-13 17:29:55,219 [DEBUG] DefaultClientConnectionOperator:177 - Connecting to umcproxy.umc.com:8080
+2019-06-13 17:29:55,229 [DEBUG] RequestAuthCache:77 - Auth cache not set in the context
+2019-06-13 17:29:55,239 [DEBUG] RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-06-13 17:29:55,239 [DEBUG] DefaultClientConnection:274 - Sending request: CONNECT download.eclipse.org:443 HTTP/1.1
+2019-06-13 17:29:55,239 [DEBUG] wire:73 -  >> "CONNECT download.eclipse.org:443 HTTP/1.1[\r][\n]"
+2019-06-13 17:29:55,239 [DEBUG] wire:73 -  >> "Host: download.eclipse.org:443[\r][\n]"
+2019-06-13 17:29:55,239 [DEBUG] wire:73 -  >> "Proxy-Connection: Keep-Alive[\r][\n]"
+2019-06-13 17:29:55,239 [DEBUG] wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_202)[\r][\n]"
+2019-06-13 17:29:55,239 [DEBUG] wire:73 -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2019-06-13 17:29:55,239 [DEBUG] wire:73 -  >> "[\r][\n]"
+2019-06-13 17:29:55,239 [DEBUG] headers:278 - >> CONNECT download.eclipse.org:443 HTTP/1.1
+2019-06-13 17:29:55,239 [DEBUG] headers:281 - >> Host: download.eclipse.org:443
+2019-06-13 17:29:55,239 [DEBUG] headers:281 - >> Proxy-Connection: Keep-Alive
+2019-06-13 17:29:55,239 [DEBUG] headers:281 - >> User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_202)
+2019-06-13 17:29:55,239 [DEBUG] headers:281 - >> Accept-Encoding: gzip,deflate
+2019-06-13 17:29:55,279 [DEBUG] wire:73 -  << "HTTP/1.1 407 Proxy Authentication Required[\r][\n]"
+2019-06-13 17:29:55,279 [DEBUG] wire:73 -  << "Proxy-Authenticate: NEGOTIATE[\r][\n]"
+2019-06-13 17:29:55,279 [DEBUG] wire:73 -  << "Proxy-Authenticate: NTLM[\r][\n]"
+2019-06-13 17:29:55,279 [DEBUG] wire:73 -  << "Proxy-Authenticate: BASIC realm="NTLM"[\r][\n]"
+2019-06-13 17:29:55,279 [DEBUG] wire:73 -  << "Cache-Control: no-cache[\r][\n]"
+2019-06-13 17:29:55,279 [DEBUG] wire:73 -  << "Pragma: no-cache[\r][\n]"
+2019-06-13 17:29:55,289 [DEBUG] wire:73 -  << "Content-Type: text/html; charset=utf-8[\r][\n]"
+2019-06-13 17:29:55,289 [DEBUG] wire:73 -  << "Proxy-Connection: close[\r][\n]"
+2019-06-13 17:29:55,289 [DEBUG] wire:73 -  << "Connection: close[\r][\n]"
+2019-06-13 17:29:55,289 [DEBUG] wire:73 -  << "Content-Length: 1115[\r][\n]"
+2019-06-13 17:29:55,289 [DEBUG] wire:73 -  << "[\r][\n]"
+2019-06-13 17:29:55,289 [DEBUG] DefaultClientConnection:259 - Receiving response: HTTP/1.1 407 Proxy Authentication Required
+2019-06-13 17:29:55,289 [DEBUG] headers:262 - << HTTP/1.1 407 Proxy Authentication Required
+2019-06-13 17:29:55,289 [DEBUG] headers:265 - << Proxy-Authenticate: NEGOTIATE
+2019-06-13 17:29:55,289 [DEBUG] headers:265 - << Proxy-Authenticate: NTLM
+2019-06-13 17:29:55,289 [DEBUG] headers:265 - << Proxy-Authenticate: BASIC realm="NTLM"
+2019-06-13 17:29:55,289 [DEBUG] headers:265 - << Cache-Control: no-cache
+2019-06-13 17:29:55,289 [DEBUG] headers:265 - << Pragma: no-cache
+2019-06-13 17:29:55,289 [DEBUG] headers:265 - << Content-Type: text/html; charset=utf-8
+2019-06-13 17:29:55,289 [DEBUG] headers:265 - << Proxy-Connection: close
+2019-06-13 17:29:55,289 [DEBUG] headers:265 - << Connection: close
+2019-06-13 17:29:55,289 [DEBUG] headers:265 - << Content-Length: 1115
+2019-06-13 17:29:55,299 [DEBUG] ResponseProcessCookies:77 - Cookie spec not specified in HTTP context
+2019-06-13 17:29:55,299 [DEBUG] SNIAwareHttpClient:77 - Authentication required
+2019-06-13 17:29:55,299 [DEBUG] SNIAwareHttpClient:107 - umcproxy.umc.com:8080 requested authentication
+2019-06-13 17:29:55,299 [DEBUG] ProxyAuthenticationStrategy:175 - Authentication schemes in the order of preference: [NTLM, Digest, Basic]
+2019-06-13 17:29:55,299 [DEBUG] ProxyAuthenticationStrategy:203 - Challenge for Digest authentication scheme not available
+2019-06-13 17:29:55,299 [DEBUG] wire:73 -  << "<HTML><HEAD>[\r][\n]"
+2019-06-13 17:29:55,299 [DEBUG] wire:73 -  << "<TITLE>Access Denied</TITLE>[\r][\n]"
+2019-06-13 17:29:55,299 [DEBUG] wire:73 -  << "</HEAD>[\r][\n]"
+2019-06-13 17:29:55,299 [DEBUG] wire:73 -  << "<BODY>[\r][\n]"
+2019-06-13 17:29:55,299 [DEBUG] wire:73 -  << "<FONT face="Helvetica">[\r][\n]"
+2019-06-13 17:29:55,299 [DEBUG] wire:73 -  << "<big><strong></strong></big><BR>[\r][\n]"
+2019-06-13 17:29:55,299 [DEBUG] wire:73 -  << "</FONT>[\r][\n]"
+2019-06-13 17:29:55,299 [DEBUG] wire:73 -  << "<blockquote>[\r][\n]"
+2019-06-13 17:29:55,299 [DEBUG] wire:73 -  << "<TABLE border=0 cellPadding=1 width="80%">[\r][\n]"
+2019-06-13 17:29:55,299 [DEBUG] wire:73 -  << "<TR><TD>[\r][\n]"
+2019-06-13 17:29:55,299 [DEBUG] wire:73 -  << "<FONT face="Helvetica">[\r][\n]"
+2019-06-13 17:29:55,299 [DEBUG] wire:73 -  << "<big>Access Denied (authentication_failed)</big>[\r][\n]"
+2019-06-13 17:29:55,309 [DEBUG] wire:73 -  << "<BR>[\r][\n]"
+2019-06-13 17:29:55,309 [DEBUG] wire:73 -  << "<BR>[\r][\n]"
+2019-06-13 17:29:55,309 [DEBUG] wire:73 -  << "</FONT>[\r][\n]"
+2019-06-13 17:29:55,309 [DEBUG] wire:73 -  << "</TD></TR>[\r][\n]"
+2019-06-13 17:29:55,309 [DEBUG] wire:73 -  << "<TR><TD>[\r][\n]"
+2019-06-13 17:29:55,309 [DEBUG] wire:73 -  << "<FONT face="Helvetica">[\r][\n]"
+2019-06-13 17:29:55,309 [DEBUG] wire:73 -  << "Your credentials could not be authenticated: "Credentials are missing.". You will not be permitted access until your credentials can be verified.[\r][\n]"
+2019-06-13 17:29:55,309 [DEBUG] wire:73 -  << "</FONT>[\r][\n]"
+2019-06-13 17:29:55,309 [DEBUG] wire:73 -  << "</TD></TR>[\r][\n]"
+2019-06-13 17:29:55,309 [DEBUG] wire:73 -  << "<TR><TD>[\r][\n]"
+2019-06-13 17:29:55,309 [DEBUG] wire:73 -  << "<FONT face="Helvetica">[\r][\n]"
+2019-06-13 17:29:55,309 [DEBUG] wire:73 -  << "This is typically caused by an incorrect username and/or password, but could also be caused by network problems.[\r][\n]"
+2019-06-13 17:29:55,309 [DEBUG] wire:73 -  << "</FONT>[\r][\n]"
+2019-06-13 17:29:55,309 [DEBUG] wire:73 -  << "</TD></TR>[\r][\n]"
+2019-06-13 17:29:55,309 [DEBUG] wire:73 -  << "<TR><TD>[\r][\n]"
+2019-06-13 17:29:55,309 [DEBUG] wire:73 -  << "<FONT face="Helvetica" SIZE=2>[\r][\n]"
+2019-06-13 17:29:55,309 [DEBUG] wire:73 -  << "<BR>[\r][\n]"
+2019-06-13 17:29:55,309 [DEBUG] wire:73 -  << "For assistance, contact your network support team.<br><br>Your request was categorized by Blue Coat Web Filter as 'Technology/Internet'. <br>If you wish to question or dispute this result, please click <a href="http://sitereview.bluecoat.com/sitereview.jsp?referrer=136&url=tcp://download.eclipse.org:443/">here</a>.[\r][\n]"
+2019-06-13 17:29:55,309 [DEBUG] wire:73 -  << "</FONT>[\r][\n]"
+2019-06-13 17:29:55,319 [DEBUG] wire:73 -  << "</TD></TR>[\r][\n]"
+2019-06-13 17:29:55,319 [DEBUG] wire:73 -  << "</TABLE>[\r][\n]"
+2019-06-13 17:29:55,319 [DEBUG] wire:73 -  << "</blockquote>[\r][\n]"
+2019-06-13 17:29:55,319 [DEBUG] wire:73 -  << "</FONT>[\r][\n]"
+2019-06-13 17:29:55,319 [DEBUG] wire:73 -  << "</BODY></HTML>[\r][\n]"
+2019-06-13 17:29:55,319 [DEBUG] DefaultClientConnection:180 - Connection 0.0.0.0:54622<->172.18.121.85:8080 closed
+2019-06-13 17:29:55,319 [DEBUG] SNIAwareHttpClient:448 - CONNECT refused by proxy: HTTP/1.1 407 Proxy Authentication Required
+2019-06-13 17:29:55,319 [DEBUG] SingleClientConnManager:265 - Releasing connection org.apache.http.impl.conn.SingleClientConnManager$ConnAdapter@5664f3bb
+2019-06-13 17:29:55,349 [DEBUG] BasicClientConnectionManager:161 - Get connection for route {tls}->http://umcproxy.umc.com:8080->https://download.eclipse.org:443
+2019-06-13 17:29:55,349 [DEBUG] DefaultClientConnectionOperator:177 - Connecting to umcproxy.umc.com:8080
+2019-06-13 17:29:55,369 [DEBUG] RequestAuthCache:77 - Auth cache not set in the context
+2019-06-13 17:29:55,369 [DEBUG] RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-06-13 17:29:55,379 [DEBUG] DefaultClientConnection:274 - Sending request: CONNECT download.eclipse.org:443 HTTP/1.1
+2019-06-13 17:29:55,379 [DEBUG] wire:73 -  >> "CONNECT download.eclipse.org:443 HTTP/1.1[\r][\n]"
+2019-06-13 17:29:55,379 [DEBUG] wire:73 -  >> "Host: download.eclipse.org:443[\r][\n]"
+2019-06-13 17:29:55,379 [DEBUG] wire:73 -  >> "Proxy-Connection: Keep-Alive[\r][\n]"
+2019-06-13 17:29:55,379 [DEBUG] wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_202)[\r][\n]"
+2019-06-13 17:29:55,379 [DEBUG] wire:73 -  >> "[\r][\n]"
+2019-06-13 17:29:55,379 [DEBUG] headers:278 - >> CONNECT download.eclipse.org:443 HTTP/1.1
+2019-06-13 17:29:55,379 [DEBUG] headers:281 - >> Host: download.eclipse.org:443
+2019-06-13 17:29:55,379 [DEBUG] headers:281 - >> Proxy-Connection: Keep-Alive
+2019-06-13 17:29:55,379 [DEBUG] headers:281 - >> User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_202)
+2019-06-13 17:29:55,399 [DEBUG] wire:73 -  << "HTTP/1.1 407 Proxy Authentication Required[\r][\n]"
+2019-06-13 17:29:55,399 [DEBUG] wire:73 -  << "Proxy-Authenticate: NEGOTIATE[\r][\n]"
+2019-06-13 17:29:55,399 [DEBUG] wire:73 -  << "Proxy-Authenticate: NTLM[\r][\n]"
+2019-06-13 17:29:55,399 [DEBUG] wire:73 -  << "Proxy-Authenticate: BASIC realm="NTLM"[\r][\n]"
+2019-06-13 17:29:55,399 [DEBUG] wire:73 -  << "Cache-Control: no-cache[\r][\n]"
+2019-06-13 17:29:55,399 [DEBUG] wire:73 -  << "Pragma: no-cache[\r][\n]"
+2019-06-13 17:29:55,399 [DEBUG] wire:73 -  << "Content-Type: text/html; charset=utf-8[\r][\n]"
+2019-06-13 17:29:55,399 [DEBUG] wire:73 -  << "Proxy-Connection: close[\r][\n]"
+2019-06-13 17:29:55,399 [DEBUG] wire:73 -  << "Connection: close[\r][\n]"
+2019-06-13 17:29:55,409 [DEBUG] wire:73 -  << "Content-Length: 1115[\r][\n]"
+2019-06-13 17:29:55,409 [DEBUG] wire:73 -  << "[\r][\n]"
+2019-06-13 17:29:55,409 [DEBUG] DefaultClientConnection:259 - Receiving response: HTTP/1.1 407 Proxy Authentication Required
+2019-06-13 17:29:55,409 [DEBUG] headers:262 - << HTTP/1.1 407 Proxy Authentication Required
+2019-06-13 17:29:55,409 [DEBUG] headers:265 - << Proxy-Authenticate: NEGOTIATE
+2019-06-13 17:29:55,409 [DEBUG] headers:265 - << Proxy-Authenticate: NTLM
+2019-06-13 17:29:55,409 [DEBUG] headers:265 - << Proxy-Authenticate: BASIC realm="NTLM"
+2019-06-13 17:29:55,409 [DEBUG] headers:265 - << Cache-Control: no-cache
+2019-06-13 17:29:55,409 [DEBUG] headers:265 - << Pragma: no-cache
+2019-06-13 17:29:55,409 [DEBUG] headers:265 - << Content-Type: text/html; charset=utf-8
+2019-06-13 17:29:55,409 [DEBUG] headers:265 - << Proxy-Connection: close
+2019-06-13 17:29:55,409 [DEBUG] headers:265 - << Connection: close
+2019-06-13 17:29:55,409 [DEBUG] headers:265 - << Content-Length: 1115
+2019-06-13 17:29:55,409 [DEBUG] ResponseProcessCookies:77 - Cookie spec not specified in HTTP context
+2019-06-13 17:29:55,409 [DEBUG] SNIAwareHttpClient:77 - Authentication required
+2019-06-13 17:29:55,409 [DEBUG] SNIAwareHttpClient:107 - umcproxy.umc.com:8080 requested authentication
+2019-06-13 17:29:55,409 [DEBUG] ProxyAuthenticationStrategy:175 - Authentication schemes in the order of preference: [NTLM, Digest, Basic]
+2019-06-13 17:29:55,409 [DEBUG] ProxyAuthenticationStrategy:203 - Challenge for Digest authentication scheme not available
+2019-06-13 17:29:55,409 [DEBUG] wire:73 -  << "<HTML><HEAD>[\r][\n]"
+2019-06-13 17:29:55,409 [DEBUG] wire:73 -  << "<TITLE>Access Denied</TITLE>[\r][\n]"
+2019-06-13 17:29:55,409 [DEBUG] wire:73 -  << "</HEAD>[\r][\n]"
+2019-06-13 17:29:55,409 [DEBUG] wire:73 -  << "<BODY>[\r][\n]"
+2019-06-13 17:29:55,419 [DEBUG] wire:73 -  << "<FONT face="Helvetica">[\r][\n]"
+2019-06-13 17:29:55,419 [DEBUG] wire:73 -  << "<big><strong></strong></big><BR>[\r][\n]"
+2019-06-13 17:29:55,419 [DEBUG] wire:73 -  << "</FONT>[\r][\n]"
+2019-06-13 17:29:55,419 [DEBUG] wire:73 -  << "<blockquote>[\r][\n]"
+2019-06-13 17:29:55,419 [DEBUG] wire:73 -  << "<TABLE border=0 cellPadding=1 width="80%">[\r][\n]"
+2019-06-13 17:29:55,419 [DEBUG] wire:73 -  << "<TR><TD>[\r][\n]"
+2019-06-13 17:29:55,419 [DEBUG] wire:73 -  << "<FONT face="Helvetica">[\r][\n]"
+2019-06-13 17:29:55,419 [DEBUG] wire:73 -  << "<big>Access Denied (authentication_failed)</big>[\r][\n]"
+2019-06-13 17:29:55,419 [DEBUG] wire:73 -  << "<BR>[\r][\n]"
+2019-06-13 17:29:55,419 [DEBUG] wire:73 -  << "<BR>[\r][\n]"
+2019-06-13 17:29:55,419 [DEBUG] wire:73 -  << "</FONT>[\r][\n]"
+2019-06-13 17:29:55,419 [DEBUG] wire:73 -  << "</TD></TR>[\r][\n]"
+2019-06-13 17:29:55,419 [DEBUG] wire:73 -  << "<TR><TD>[\r][\n]"
+2019-06-13 17:29:55,419 [DEBUG] wire:73 -  << "<FONT face="Helvetica">[\r][\n]"
+2019-06-13 17:29:55,419 [DEBUG] wire:73 -  << "Your credentials could not be authenticated: "Credentials are missing.". You will not be permitted access until your credentials can be verified.[\r][\n]"
+2019-06-13 17:29:55,419 [DEBUG] wire:73 -  << "</FONT>[\r][\n]"
+2019-06-13 17:29:55,419 [DEBUG] wire:73 -  << "</TD></TR>[\r][\n]"
+2019-06-13 17:29:55,419 [DEBUG] wire:73 -  << "<TR><TD>[\r][\n]"
+2019-06-13 17:29:55,419 [DEBUG] wire:73 -  << "<FONT face="Helvetica">[\r][\n]"
+2019-06-13 17:29:55,419 [DEBUG] wire:73 -  << "This is typically caused by an incorrect username and/or password, but could also be caused by network problems.[\r][\n]"
+2019-06-13 17:29:55,419 [DEBUG] wire:73 -  << "</FONT>[\r][\n]"
+2019-06-13 17:29:55,419 [DEBUG] wire:73 -  << "</TD></TR>[\r][\n]"
+2019-06-13 17:29:55,419 [DEBUG] wire:73 -  << "<TR><TD>[\r][\n]"
+2019-06-13 17:29:55,429 [DEBUG] wire:73 -  << "<FONT face="Helvetica" SIZE=2>[\r][\n]"
+2019-06-13 17:29:55,429 [DEBUG] wire:73 -  << "<BR>[\r][\n]"
+2019-06-13 17:29:55,429 [DEBUG] wire:73 -  << "For assistance, contact your network support team.<br><br>Your request was categorized by Blue Coat Web Filter as 'Technology/Internet'. <br>If you wish to question or dispute this result, please click <a href="http://sitereview.bluecoat.com/sitereview.jsp?referrer=136&url=tcp://download.eclipse.org:443/">here</a>.[\r][\n]"
+2019-06-13 17:29:55,429 [DEBUG] wire:73 -  << "</FONT>[\r][\n]"
+2019-06-13 17:29:55,429 [DEBUG] wire:73 -  << "</TD></TR>[\r][\n]"
+2019-06-13 17:29:55,429 [DEBUG] wire:87 -  << "</T"
+2019-06-13 17:29:55,429 [DEBUG] wire:73 -  << "ABLE>[\r][\n]"
+2019-06-13 17:29:55,429 [DEBUG] wire:73 -  << "</blockquote>[\r][\n]"
+2019-06-13 17:29:55,429 [DEBUG] wire:73 -  << "</FONT>[\r][\n]"
+2019-06-13 17:29:55,429 [DEBUG] wire:73 -  << "</BODY></HTML>[\r][\n]"
+2019-06-13 17:29:55,429 [DEBUG] DefaultClientConnection:180 - Connection 0.0.0.0:54623<->172.18.121.85:8080 closed
+2019-06-13 17:29:55,429 [DEBUG] SNIAwareHttpClient:448 - CONNECT refused by proxy: HTTP/1.1 407 Proxy Authentication Required
+2019-06-13 17:29:55,429 [DEBUG] BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@6ccf4125
+2019-06-13 17:29:55,459 [DEBUG] BasicClientConnectionManager:161 - Get connection for route {tls}->http://umcproxy.umc.com:8080->https://download.eclipse.org:443
+2019-06-13 17:29:55,459 [DEBUG] DefaultClientConnectionOperator:177 - Connecting to umcproxy.umc.com:8080
+2019-06-13 17:29:55,469 [DEBUG] RequestAuthCache:77 - Auth cache not set in the context
+2019-06-13 17:29:55,469 [DEBUG] RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-06-13 17:29:55,479 [DEBUG] DefaultClientConnection:274 - Sending request: CONNECT download.eclipse.org:443 HTTP/1.1
+2019-06-13 17:29:55,479 [DEBUG] wire:73 -  >> "CONNECT download.eclipse.org:443 HTTP/1.1[\r][\n]"
+2019-06-13 17:29:55,479 [DEBUG] wire:73 -  >> "Host: download.eclipse.org:443[\r][\n]"
+2019-06-13 17:29:55,479 [DEBUG] wire:73 -  >> "Proxy-Connection: Keep-Alive[\r][\n]"
+2019-06-13 17:29:55,479 [DEBUG] wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_202)[\r][\n]"
+2019-06-13 17:29:55,479 [DEBUG] wire:73 -  >> "[\r][\n]"
+2019-06-13 17:29:55,479 [DEBUG] headers:278 - >> CONNECT download.eclipse.org:443 HTTP/1.1
+2019-06-13 17:29:55,479 [DEBUG] headers:281 - >> Host: download.eclipse.org:443
+2019-06-13 17:29:55,479 [DEBUG] headers:281 - >> Proxy-Connection: Keep-Alive
+2019-06-13 17:29:55,479 [DEBUG] headers:281 - >> User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_202)
+2019-06-13 17:29:55,509 [DEBUG] wire:73 -  << "HTTP/1.1 407 Proxy Authentication Required[\r][\n]"
+2019-06-13 17:29:55,509 [DEBUG] wire:73 -  << "Proxy-Authenticate: NEGOTIATE[\r][\n]"
+2019-06-13 17:29:55,509 [DEBUG] wire:73 -  << "Proxy-Authenticate: NTLM[\r][\n]"
+2019-06-13 17:29:55,509 [DEBUG] wire:73 -  << "Proxy-Authenticate: BASIC realm="NTLM"[\r][\n]"
+2019-06-13 17:29:55,509 [DEBUG] wire:73 -  << "Cache-Control: no-cache[\r][\n]"
+2019-06-13 17:29:55,509 [DEBUG] wire:73 -  << "Pragma: no-cache[\r][\n]"
+2019-06-13 17:29:55,509 [DEBUG] wire:73 -  << "Content-Type: text/html; charset=utf-8[\r][\n]"
+2019-06-13 17:29:55,509 [DEBUG] wire:73 -  << "Proxy-Connection: close[\r][\n]"
+2019-06-13 17:29:55,509 [DEBUG] wire:73 -  << "Connection: close[\r][\n]"
+2019-06-13 17:29:55,509 [DEBUG] wire:73 -  << "Content-Length: 1115[\r][\n]"
+2019-06-13 17:29:55,509 [DEBUG] wire:73 -  << "[\r][\n]"
+2019-06-13 17:29:55,509 [DEBUG] DefaultClientConnection:259 - Receiving response: HTTP/1.1 407 Proxy Authentication Required
+2019-06-13 17:29:55,509 [DEBUG] headers:262 - << HTTP/1.1 407 Proxy Authentication Required
+2019-06-13 17:29:55,509 [DEBUG] headers:265 - << Proxy-Authenticate: NEGOTIATE
+2019-06-13 17:29:55,509 [DEBUG] headers:265 - << Proxy-Authenticate: NTLM
+2019-06-13 17:29:55,509 [DEBUG] headers:265 - << Proxy-Authenticate: BASIC realm="NTLM"
+2019-06-13 17:29:55,509 [DEBUG] headers:265 - << Cache-Control: no-cache
+2019-06-13 17:29:55,509 [DEBUG] headers:265 - << Pragma: no-cache
+2019-06-13 17:29:55,509 [DEBUG] headers:265 - << Content-Type: text/html; charset=utf-8
+2019-06-13 17:29:55,509 [DEBUG] headers:265 - << Proxy-Connection: close
+2019-06-13 17:29:55,509 [DEBUG] headers:265 - << Connection: close
+2019-06-13 17:29:55,519 [DEBUG] headers:265 - << Content-Length: 1115
+2019-06-13 17:29:55,519 [DEBUG] ResponseProcessCookies:77 - Cookie spec not specified in HTTP context
+2019-06-13 17:29:55,519 [DEBUG] SNIAwareHttpClient:77 - Authentication required
+2019-06-13 17:29:55,519 [DEBUG] SNIAwareHttpClient:107 - umcproxy.umc.com:8080 requested authentication
+2019-06-13 17:29:55,519 [DEBUG] ProxyAuthenticationStrategy:175 - Authentication schemes in the order of preference: [NTLM, Digest, Basic]
+2019-06-13 17:29:55,519 [DEBUG] ProxyAuthenticationStrategy:203 - Challenge for Digest authentication scheme not available
+2019-06-13 17:29:55,519 [DEBUG] wire:73 -  << "<HTML><HEAD>[\r][\n]"
+2019-06-13 17:29:55,519 [DEBUG] wire:73 -  << "<TITLE>Access Denied</TITLE>[\r][\n]"
+2019-06-13 17:29:55,519 [DEBUG] wire:73 -  << "</HEAD>[\r][\n]"
+2019-06-13 17:29:55,519 [DEBUG] wire:73 -  << "<BODY>[\r][\n]"
+2019-06-13 17:29:55,519 [DEBUG] wire:73 -  << "<FONT face="Helvetica">[\r][\n]"
+2019-06-13 17:29:55,519 [DEBUG] wire:73 -  << "<big><strong></strong></big><BR>[\r][\n]"
+2019-06-13 17:29:55,519 [DEBUG] wire:73 -  << "</FONT>[\r][\n]"
+2019-06-13 17:29:55,519 [DEBUG] wire:73 -  << "<blockquote>[\r][\n]"
+2019-06-13 17:29:55,519 [DEBUG] wire:73 -  << "<TABLE border=0 cellPadding=1 width="80%">[\r][\n]"
+2019-06-13 17:29:55,519 [DEBUG] wire:73 -  << "<TR><TD>[\r][\n]"
+2019-06-13 17:29:55,519 [DEBUG] wire:73 -  << "<FONT face="Helvetica">[\r][\n]"
+2019-06-13 17:29:55,519 [DEBUG] wire:73 -  << "<big>Access Denied (authentication_failed)</big>[\r][\n]"
+2019-06-13 17:29:55,519 [DEBUG] wire:73 -  << "<BR>[\r][\n]"
+2019-06-13 17:29:55,529 [DEBUG] wire:73 -  << "<BR>[\r][\n]"
+2019-06-13 17:29:55,529 [DEBUG] wire:73 -  << "</FONT>[\r][\n]"
+2019-06-13 17:29:55,529 [DEBUG] wire:73 -  << "</TD></TR>[\r][\n]"
+2019-06-13 17:29:55,529 [DEBUG] wire:73 -  << "<TR><TD>[\r][\n]"
+2019-06-13 17:29:55,529 [DEBUG] wire:73 -  << "<FONT face="Helvetica">[\r][\n]"
+2019-06-13 17:29:55,529 [DEBUG] wire:73 -  << "Your credentials could not be authenticated: "Credentials are missing.". You will not be permitted access until your credentials can be verified.[\r][\n]"
+2019-06-13 17:29:55,529 [DEBUG] wire:73 -  << "</FONT>[\r][\n]"
+2019-06-13 17:29:55,529 [DEBUG] wire:73 -  << "</TD></TR>[\r][\n]"
+2019-06-13 17:29:55,529 [DEBUG] wire:73 -  << "<TR><TD>[\r][\n]"
+2019-06-13 17:29:55,529 [DEBUG] wire:73 -  << "<FONT face="Helvetica">[\r][\n]"
+2019-06-13 17:29:55,529 [DEBUG] wire:73 -  << "This is typically caused by an incorrect username and/or password, but could also be caused by network problems.[\r][\n]"
+2019-06-13 17:29:55,529 [DEBUG] wire:73 -  << "</FONT>[\r][\n]"
+2019-06-13 17:29:55,529 [DEBUG] wire:73 -  << "</TD></TR>[\r][\n]"
+2019-06-13 17:29:55,529 [DEBUG] wire:73 -  << "<TR><TD>[\r][\n]"
+2019-06-13 17:29:55,529 [DEBUG] wire:73 -  << "<FONT face="Helvetica" SIZE=2>[\r][\n]"
+2019-06-13 17:29:55,529 [DEBUG] wire:73 -  << "<BR>[\r][\n]"
+2019-06-13 17:29:55,529 [DEBUG] wire:73 -  << "For assistance, contact your network support team.<br><br>Your request was categorized by Blue Coat Web Filter as 'Technology/Internet'. <br>If you wish to question or dispute this result, please click <a href="http://sitereview.bluecoat.com/sitereview.jsp?referrer=136&url=tcp://download.eclipse.org:443/">here</a>.[\r][\n]"
+2019-06-13 17:29:55,529 [DEBUG] wire:73 -  << "</FONT>[\r][\n]"
+2019-06-13 17:29:55,529 [DEBUG] wire:73 -  << "</TD></TR>[\r][\n]"
+2019-06-13 17:29:55,539 [DEBUG] wire:87 -  << "</T"
+2019-06-13 17:29:55,539 [DEBUG] wire:73 -  << "ABLE>[\r][\n]"
+2019-06-13 17:29:55,539 [DEBUG] wire:73 -  << "</blockquote>[\r][\n]"
+2019-06-13 17:29:55,539 [DEBUG] wire:73 -  << "</FONT>[\r][\n]"
+2019-06-13 17:29:55,539 [DEBUG] wire:73 -  << "</BODY></HTML>[\r][\n]"
+2019-06-13 17:29:55,539 [DEBUG] DefaultClientConnection:180 - Connection 0.0.0.0:54624<->172.18.121.85:8080 closed
+2019-06-13 17:29:55,539 [DEBUG] SNIAwareHttpClient:448 - CONNECT refused by proxy: HTTP/1.1 407 Proxy Authentication Required
+2019-06-13 17:29:55,539 [DEBUG] BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@2548ead3

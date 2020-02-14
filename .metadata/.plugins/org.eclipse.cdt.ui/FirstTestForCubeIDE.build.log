@@ -1,0 +1,10 @@
+17:47:30 **** Incremental Build of configuration Debug for project FirstTestForCubeIDE ****
+make -j4 all 
+arm-none-eabi-size   FirstTestForCubeIDE.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5904	     20	   1580	   7504	   1d50	FirstTestForCubeIDE.elf
+Finished building: default.size.stdout
+ 
+
+17:47:36 Build Finished. 0 errors, 0 warnings. (took 5s.260ms)
+

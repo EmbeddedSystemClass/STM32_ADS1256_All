@@ -1,0 +1,3 @@
+Calculate_statistic.c:4:7:Calculate_max	56	static
+Calculate_statistic.c:26:7:Calculate_FreqMax	40	static
+Calculate_statistic.c:60:7:Calculate_3timesFeatureAverage	8	static

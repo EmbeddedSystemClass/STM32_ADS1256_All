@@ -1,0 +1,17 @@
+main.c:145:6:writeCMD	24	static
+main.c:175:6:writeByteToReg	16	static
+main.c:131:6:setDIFFChannel	0	static
+main.c:162:6:setDataRate	0	static
+main.c:199:6:setPGA	0	static
+main.c:211:6:send8bit	16	static
+main.c:223:6:waitDRDY	16	static
+main.c:255:9:receive8bit	24	static
+main.c:283:9:readByteFromReg	24	static
+main.c:240:9:readChipID	16	static
+main.c:304:6:setBuffer	24	static
+main.c:420:6:SystemClock_Config	96	static
+main.c:323:5:main	56	static
+main.c:637:6:HAL_TIM_PeriodElapsedCallback	0	static
+main.c:644:6:HAL_GPIO_EXTI_Callback	16	static
+main.c:686:6:HAL_I2C_SlaveRxCpltCallback	16	static
+main.c:703:6:Error_Handler	0	static

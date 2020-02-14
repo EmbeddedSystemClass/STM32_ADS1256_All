@@ -1,0 +1,2 @@
+EEPROM_24C02.c:11:6:writeEEPROM	48	static
+EEPROM_24C02.c:22:6:readEEPROM	24	static

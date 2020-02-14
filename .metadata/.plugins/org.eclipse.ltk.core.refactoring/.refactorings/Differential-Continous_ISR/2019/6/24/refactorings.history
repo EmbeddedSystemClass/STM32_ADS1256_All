@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Differential-Continous_ISR/SPITEST.ioc&apos; to &apos;Differential-Continous_ISR.ioc&apos;" description="Rename resource &apos;SPITEST.ioc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="SPITEST.ioc" name="Differential-Continous_ISR.ioc" stamp="1560393221929" updateReferences="true"/>
+</session>

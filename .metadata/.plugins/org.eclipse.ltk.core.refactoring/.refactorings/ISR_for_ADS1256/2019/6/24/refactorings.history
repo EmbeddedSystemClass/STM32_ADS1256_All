@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ISR_for_ADS1256/SPITEST-Differential-Single.ioc&apos; to &apos;ISR_for_ADS1256.ioc&apos;" description="Rename resource &apos;SPITEST-Differential-Single.ioc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="SPITEST-Differential-Single.ioc" name="ISR_for_ADS1256.ioc" stamp="1560322799212" updateReferences="true"/>
+</session>

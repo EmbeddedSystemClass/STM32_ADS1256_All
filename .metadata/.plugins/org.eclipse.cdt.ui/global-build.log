@@ -1,0 +1,523 @@
+11:18:24 **** Incremental Build of configuration Debug for project Differential-Continous_ISR ****
+make all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:509:9: warning: unused variable 'values_DIFF_CONT' [-Wunused-variable]
+   float values_DIFF_CONT [num_measure_DIFF_CONT];
+         ^~~~~~~~~~~~~~~~
+../Src/main.c:493:21: warning: unused variable 'sysclock' [-Wunused-variable]
+   volatile uint32_t sysclock = SystemCoreClock;
+                     ^~~~~~~~
+arm-none-eabi-gcc -o "Differential-Continous_ISR.elf" @"objects.list"   -mcpu=cortex-m4 -T"../STM32F407VG_FLASH.ld" --specs=nosys.specs -Wl,-Map="Differential-Continous_ISR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Differential-Continous_ISR.elf
+ 
+make --no-print-directory post-build
+arm-none-eabi-objcopy.exe -O ihex "Differential-Continous_ISR.elf" "Differential-Continous_ISR.hex"
+ 
+arm-none-eabi-size   Differential-Continous_ISR.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6824	     24	   1744	   8592	   2190	Differential-Continous_ISR.elf
+Finished building: default.size.stdout
+ 
+arm-none-eabi-objdump -h -S  Differential-Continous_ISR.elf  > "Differential-Continous_ISR.list"
+Finished building: Differential-Continous_ISR.list
+ 
+11:18:57 **** Incremental Build of configuration Debug for project Differential-Continous_ISR ****
+make all 
+arm-none-eabi-size   Differential-Continous_ISR.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6824	     24	   1744	   8592	   2190	Differential-Continous_ISR.elf
+Finished building: default.size.stdout
+ 
+11:22:49 **** Incremental Build of configuration Debug for project Differential-Continous_ISR ****
+make all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:509:9: warning: unused variable 'values_DIFF_CONT' [-Wunused-variable]
+   float values_DIFF_CONT [num_measure_DIFF_CONT];
+         ^~~~~~~~~~~~~~~~
+../Src/main.c:493:21: warning: unused variable 'sysclock' [-Wunused-variable]
+   volatile uint32_t sysclock = SystemCoreClock;
+                     ^~~~~~~~
+arm-none-eabi-gcc -o "Differential-Continous_ISR.elf" @"objects.list"   -mcpu=cortex-m4 -T"../STM32F407VG_FLASH.ld" --specs=nosys.specs -Wl,-Map="Differential-Continous_ISR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Differential-Continous_ISR.elf
+ 
+make --no-print-directory post-build
+arm-none-eabi-objcopy.exe -O ihex "Differential-Continous_ISR.elf" "Differential-Continous_ISR.hex"
+ 
+arm-none-eabi-size   Differential-Continous_ISR.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6832	     24	   1744	   8600	   2198	Differential-Continous_ISR.elf
+Finished building: default.size.stdout
+ 
+arm-none-eabi-objdump -h -S  Differential-Continous_ISR.elf  > "Differential-Continous_ISR.list"
+Finished building: Differential-Continous_ISR.list
+ 
+11:23:25 **** Incremental Build of configuration Debug for project Differential-Continous_ISR ****
+make all 
+arm-none-eabi-size   Differential-Continous_ISR.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6832	     24	   1744	   8600	   2198	Differential-Continous_ISR.elf
+Finished building: default.size.stdout
+ 
+11:26:21 **** Incremental Build of configuration Debug for project Differential-Continous_ISR ****
+make all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:510:9: warning: unused variable 'values_DIFF_CONT' [-Wunused-variable]
+   float values_DIFF_CONT [num_measure_DIFF_CONT];
+         ^~~~~~~~~~~~~~~~
+../Src/main.c:494:21: warning: unused variable 'sysclock' [-Wunused-variable]
+   volatile uint32_t sysclock = SystemCoreClock;
+                     ^~~~~~~~
+arm-none-eabi-gcc -o "Differential-Continous_ISR.elf" @"objects.list"   -mcpu=cortex-m4 -T"../STM32F407VG_FLASH.ld" --specs=nosys.specs -Wl,-Map="Differential-Continous_ISR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Differential-Continous_ISR.elf
+ 
+make --no-print-directory post-build
+arm-none-eabi-objcopy.exe -O ihex "Differential-Continous_ISR.elf" "Differential-Continous_ISR.hex"
+ 
+arm-none-eabi-size   Differential-Continous_ISR.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6804	     24	   1748	   8576	   2180	Differential-Continous_ISR.elf
+Finished building: default.size.stdout
+ 
+arm-none-eabi-objdump -h -S  Differential-Continous_ISR.elf  > "Differential-Continous_ISR.list"
+Finished building: Differential-Continous_ISR.list
+ 
+13:07:00 **** Incremental Build of configuration Debug for project Differential-Continous_ISR ****
+make all 
+arm-none-eabi-gcc "../Src/Delay.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/Delay.d" -MT"Src/Delay.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/Delay.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:510:9: warning: unused variable 'values_DIFF_CONT' [-Wunused-variable]
+   float values_DIFF_CONT [num_measure_DIFF_CONT];
+         ^~~~~~~~~~~~~~~~
+../Src/main.c:494:21: warning: unused variable 'sysclock' [-Wunused-variable]
+   volatile uint32_t sysclock = SystemCoreClock;
+                     ^~~~~~~~
+arm-none-eabi-gcc "../Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/stm32f4xx_hal_msp.d" -MT"Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/stm32f4xx_it.d" -MT"Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/stm32f4xx_it.o"
+arm-none-eabi-gcc "../Src/system_stm32f4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/system_stm32f4xx.d" -MT"Src/system_stm32f4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/system_stm32f4xx.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+arm-none-eabi-gcc -o "Differential-Continous_ISR.elf" @"objects.list"   -mcpu=cortex-m4 -T"../STM32F407VG_FLASH.ld" --specs=nosys.specs -Wl,-Map="Differential-Continous_ISR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Differential-Continous_ISR.elf
+ 
+make --no-print-directory post-build
+arm-none-eabi-objcopy.exe -O ihex "Differential-Continous_ISR.elf" "Differential-Continous_ISR.hex"
+ 
+arm-none-eabi-size   Differential-Continous_ISR.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6804	     24	   1748	   8576	   2180	Differential-Continous_ISR.elf
+Finished building: default.size.stdout
+ 
+arm-none-eabi-objdump -h -S  Differential-Continous_ISR.elf  > "Differential-Continous_ISR.list"
+Finished building: Differential-Continous_ISR.list
+ 
+13:08:24 **** Incremental Build of configuration Debug for project Differential-Continous_ISR ****
+make all 
+arm-none-eabi-size   Differential-Continous_ISR.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6804	     24	   1748	   8576	   2180	Differential-Continous_ISR.elf
+Finished building: default.size.stdout
+ 
+13:10:21 **** Incremental Build of configuration Debug for project Differential-Continous_ISR ****
+make all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:510:9: warning: unused variable 'values_DIFF_CONT' [-Wunused-variable]
+   float values_DIFF_CONT [num_measure_DIFF_CONT];
+         ^~~~~~~~~~~~~~~~
+../Src/main.c:494:21: warning: unused variable 'sysclock' [-Wunused-variable]
+   volatile uint32_t sysclock = SystemCoreClock;
+                     ^~~~~~~~
+arm-none-eabi-gcc -o "Differential-Continous_ISR.elf" @"objects.list"   -mcpu=cortex-m4 -T"../STM32F407VG_FLASH.ld" --specs=nosys.specs -Wl,-Map="Differential-Continous_ISR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Differential-Continous_ISR.elf
+ 
+make --no-print-directory post-build
+arm-none-eabi-objcopy.exe -O ihex "Differential-Continous_ISR.elf" "Differential-Continous_ISR.hex"
+ 
+arm-none-eabi-size   Differential-Continous_ISR.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6804	     24	   1748	   8576	   2180	Differential-Continous_ISR.elf
+Finished building: default.size.stdout
+ 
+arm-none-eabi-objdump -h -S  Differential-Continous_ISR.elf  > "Differential-Continous_ISR.list"
+Finished building: Differential-Continous_ISR.list
+ 
+13:14:15 **** Incremental Build of configuration Debug for project Differential-Continous_ISR ****
+make all 
+arm-none-eabi-size   Differential-Continous_ISR.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6804	     24	   1748	   8576	   2180	Differential-Continous_ISR.elf
+Finished building: default.size.stdout
+ 
+13:14:52 **** Incremental Build of configuration Debug for project SPITEST-Differential-Single ****
+make all 
+arm-none-eabi-size   SPITEST-Differential-Single.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6720	     20	  13744	  20484	   5004	SPITEST-Differential-Single.elf
+Finished building: default.size.stdout
+ 
+13:15:38 **** Incremental Build of configuration Debug for project Differential-Continous_ISR ****
+make all 
+arm-none-eabi-size   Differential-Continous_ISR.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6804	     24	   1748	   8576	   2180	Differential-Continous_ISR.elf
+Finished building: default.size.stdout
+ 
+13:18:13 **** Incremental Build of configuration Debug for project Differential-Continous_ISR ****
+make all 
+arm-none-eabi-size   Differential-Continous_ISR.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6804	     24	   1748	   8576	   2180	Differential-Continous_ISR.elf
+Finished building: default.size.stdout
+ 
+13:18:28 **** Incremental Build of configuration Debug for project Differential-Continous_ISR ****
+make all 
+arm-none-eabi-size   Differential-Continous_ISR.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6804	     24	   1748	   8576	   2180	Differential-Continous_ISR.elf
+Finished building: default.size.stdout
+ 
+13:19:24 **** Incremental Build of configuration Debug for project Differential-Continous_ISR ****
+make all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:510:9: warning: unused variable 'values_DIFF_CONT' [-Wunused-variable]
+   float values_DIFF_CONT [num_measure_DIFF_CONT];
+         ^~~~~~~~~~~~~~~~
+../Src/main.c:494:21: warning: unused variable 'sysclock' [-Wunused-variable]
+   volatile uint32_t sysclock = SystemCoreClock;
+                     ^~~~~~~~
+arm-none-eabi-gcc -o "Differential-Continous_ISR.elf" @"objects.list"   -mcpu=cortex-m4 -T"../STM32F407VG_FLASH.ld" --specs=nosys.specs -Wl,-Map="Differential-Continous_ISR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Differential-Continous_ISR.elf
+ 
+make --no-print-directory post-build
+arm-none-eabi-objcopy.exe -O ihex "Differential-Continous_ISR.elf" "Differential-Continous_ISR.hex"
+ 
+arm-none-eabi-size   Differential-Continous_ISR.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6804	     24	   1748	   8576	   2180	Differential-Continous_ISR.elf
+Finished building: default.size.stdout
+ 
+arm-none-eabi-objdump -h -S  Differential-Continous_ISR.elf  > "Differential-Continous_ISR.list"
+Finished building: Differential-Continous_ISR.list
+ 
+13:22:47 **** Incremental Build of configuration Debug for project Differential-Continous_ISR ****
+make all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:510:9: warning: unused variable 'values_DIFF_CONT' [-Wunused-variable]
+   float values_DIFF_CONT [num_measure_DIFF_CONT];
+         ^~~~~~~~~~~~~~~~
+../Src/main.c:494:21: warning: unused variable 'sysclock' [-Wunused-variable]
+   volatile uint32_t sysclock = SystemCoreClock;
+                     ^~~~~~~~
+arm-none-eabi-gcc -o "Differential-Continous_ISR.elf" @"objects.list"   -mcpu=cortex-m4 -T"../STM32F407VG_FLASH.ld" --specs=nosys.specs -Wl,-Map="Differential-Continous_ISR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Differential-Continous_ISR.elf
+ 
+make --no-print-directory post-build
+arm-none-eabi-objcopy.exe -O ihex "Differential-Continous_ISR.elf" "Differential-Continous_ISR.hex"
+ 
+arm-none-eabi-size   Differential-Continous_ISR.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6804	     24	   1748	   8576	   2180	Differential-Continous_ISR.elf
+Finished building: default.size.stdout
+ 
+arm-none-eabi-objdump -h -S  Differential-Continous_ISR.elf  > "Differential-Continous_ISR.list"
+Finished building: Differential-Continous_ISR.list
+ 
+13:24:41 **** Incremental Build of configuration Debug for project Differential-Continous_ISR ****
+make all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:510:9: warning: unused variable 'values_DIFF_CONT' [-Wunused-variable]
+   float values_DIFF_CONT [num_measure_DIFF_CONT];
+         ^~~~~~~~~~~~~~~~
+../Src/main.c:494:21: warning: unused variable 'sysclock' [-Wunused-variable]
+   volatile uint32_t sysclock = SystemCoreClock;
+                     ^~~~~~~~
+arm-none-eabi-gcc -o "Differential-Continous_ISR.elf" @"objects.list"   -mcpu=cortex-m4 -T"../STM32F407VG_FLASH.ld" --specs=nosys.specs -Wl,-Map="Differential-Continous_ISR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Differential-Continous_ISR.elf
+ 
+make --no-print-directory post-build
+arm-none-eabi-objcopy.exe -O ihex "Differential-Continous_ISR.elf" "Differential-Continous_ISR.hex"
+ 
+arm-none-eabi-size   Differential-Continous_ISR.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6804	     24	   1748	   8576	   2180	Differential-Continous_ISR.elf
+Finished building: default.size.stdout
+ 
+arm-none-eabi-objdump -h -S  Differential-Continous_ISR.elf  > "Differential-Continous_ISR.list"
+Finished building: Differential-Continous_ISR.list
+ 
+13:26:23 **** Incremental Build of configuration Debug for project Differential-Continous_ISR ****
+make all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:510:9: warning: unused variable 'values_DIFF_CONT' [-Wunused-variable]
+   float values_DIFF_CONT [num_measure_DIFF_CONT];
+         ^~~~~~~~~~~~~~~~
+../Src/main.c:494:21: warning: unused variable 'sysclock' [-Wunused-variable]
+   volatile uint32_t sysclock = SystemCoreClock;
+                     ^~~~~~~~
+arm-none-eabi-gcc -o "Differential-Continous_ISR.elf" @"objects.list"   -mcpu=cortex-m4 -T"../STM32F407VG_FLASH.ld" --specs=nosys.specs -Wl,-Map="Differential-Continous_ISR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Differential-Continous_ISR.elf
+ 
+make --no-print-directory post-build
+arm-none-eabi-objcopy.exe -O ihex "Differential-Continous_ISR.elf" "Differential-Continous_ISR.hex"
+ 
+arm-none-eabi-size   Differential-Continous_ISR.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6792	     24	   1748	   8564	   2174	Differential-Continous_ISR.elf
+Finished building: default.size.stdout
+ 
+arm-none-eabi-objdump -h -S  Differential-Continous_ISR.elf  > "Differential-Continous_ISR.list"
+Finished building: Differential-Continous_ISR.list
+ 
+13:28:24 **** Incremental Build of configuration Debug for project Differential-Continous_ISR ****
+make all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:525:9: warning: unused variable 'values_DIFF_CONT' [-Wunused-variable]
+   float values_DIFF_CONT [num_measure_DIFF_CONT];
+         ^~~~~~~~~~~~~~~~
+../Src/main.c:494:21: warning: unused variable 'sysclock' [-Wunused-variable]
+   volatile uint32_t sysclock = SystemCoreClock;
+                     ^~~~~~~~
+arm-none-eabi-gcc -o "Differential-Continous_ISR.elf" @"objects.list"   -mcpu=cortex-m4 -T"../STM32F407VG_FLASH.ld" --specs=nosys.specs -Wl,-Map="Differential-Continous_ISR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Differential-Continous_ISR.elf
+ 
+make --no-print-directory post-build
+arm-none-eabi-objcopy.exe -O ihex "Differential-Continous_ISR.elf" "Differential-Continous_ISR.hex"
+ 
+arm-none-eabi-size   Differential-Continous_ISR.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6776	     24	   1748	   8548	   2164	Differential-Continous_ISR.elf
+Finished building: default.size.stdout
+ 
+arm-none-eabi-objdump -h -S  Differential-Continous_ISR.elf  > "Differential-Continous_ISR.list"
+Finished building: Differential-Continous_ISR.list
+ 
+13:35:20 **** Incremental Build of configuration Debug for project Differential-Continous_ISR ****
+make all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:525:9: warning: unused variable 'values_DIFF_CONT' [-Wunused-variable]
+   float values_DIFF_CONT [num_measure_DIFF_CONT];
+         ^~~~~~~~~~~~~~~~
+../Src/main.c:494:21: warning: unused variable 'sysclock' [-Wunused-variable]
+   volatile uint32_t sysclock = SystemCoreClock;
+                     ^~~~~~~~
+arm-none-eabi-gcc -o "Differential-Continous_ISR.elf" @"objects.list"   -mcpu=cortex-m4 -T"../STM32F407VG_FLASH.ld" --specs=nosys.specs -Wl,-Map="Differential-Continous_ISR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Differential-Continous_ISR.elf
+ 
+make --no-print-directory post-build
+arm-none-eabi-objcopy.exe -O ihex "Differential-Continous_ISR.elf" "Differential-Continous_ISR.hex"
+ 
+arm-none-eabi-size   Differential-Continous_ISR.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6796	     24	   1748	   8568	   2178	Differential-Continous_ISR.elf
+Finished building: default.size.stdout
+ 
+arm-none-eabi-objdump -h -S  Differential-Continous_ISR.elf  > "Differential-Continous_ISR.list"
+Finished building: Differential-Continous_ISR.list
+ 
+13:36:07 **** Incremental Build of configuration Debug for project Differential-Continous_ISR ****
+make all 
+arm-none-eabi-size   Differential-Continous_ISR.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6796	     24	   1748	   8568	   2178	Differential-Continous_ISR.elf
+Finished building: default.size.stdout
+ 
+13:36:59 **** Incremental Build of configuration Debug for project Differential-Continous_ISR ****
+make all 
+arm-none-eabi-size   Differential-Continous_ISR.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6796	     24	   1748	   8568	   2178	Differential-Continous_ISR.elf
+Finished building: default.size.stdout
+ 
+13:37:51 **** Incremental Build of configuration Debug for project Differential-Continous_ISR ****
+make all 
+arm-none-eabi-size   Differential-Continous_ISR.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6796	     24	   1748	   8568	   2178	Differential-Continous_ISR.elf
+Finished building: default.size.stdout
+ 
+14:20:03 **** Incremental Build of configuration Debug for project Differential-Continous_ISR ****
+make all 
+arm-none-eabi-size   Differential-Continous_ISR.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6796	     24	   1748	   8568	   2178	Differential-Continous_ISR.elf
+Finished building: default.size.stdout
+ 
+14:23:27 **** Incremental Build of configuration Debug for project Differential-Continous_ISR ****
+make all 
+arm-none-eabi-size   Differential-Continous_ISR.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6796	     24	   1748	   8568	   2178	Differential-Continous_ISR.elf
+Finished building: default.size.stdout
+ 
+14:24:46 **** Incremental Build of configuration Debug for project Differential-Continous_ISR ****
+make all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:525:9: warning: unused variable 'values_DIFF_CONT' [-Wunused-variable]
+   float values_DIFF_CONT [num_measure_DIFF_CONT];
+         ^~~~~~~~~~~~~~~~
+../Src/main.c:494:21: warning: unused variable 'sysclock' [-Wunused-variable]
+   volatile uint32_t sysclock = SystemCoreClock;
+                     ^~~~~~~~
+arm-none-eabi-gcc -o "Differential-Continous_ISR.elf" @"objects.list"   -mcpu=cortex-m4 -T"../STM32F407VG_FLASH.ld" --specs=nosys.specs -Wl,-Map="Differential-Continous_ISR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Differential-Continous_ISR.elf
+ 
+make --no-print-directory post-build
+arm-none-eabi-objcopy.exe -O ihex "Differential-Continous_ISR.elf" "Differential-Continous_ISR.hex"
+ 
+arm-none-eabi-size   Differential-Continous_ISR.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6784	     24	   1748	   8556	   216c	Differential-Continous_ISR.elf
+Finished building: default.size.stdout
+ 
+arm-none-eabi-objdump -h -S  Differential-Continous_ISR.elf  > "Differential-Continous_ISR.list"
+Finished building: Differential-Continous_ISR.list
+ 
+14:26:33 **** Incremental Build of configuration Debug for project SPITEST-Differential-Single ****
+make all 
+arm-none-eabi-size   SPITEST-Differential-Single.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6720	     20	  13744	  20484	   5004	SPITEST-Differential-Single.elf
+Finished building: default.size.stdout
+ 
+14:27:34 **** Incremental Build of configuration Debug for project Differential-Continous_ISR ****
+make all 
+arm-none-eabi-size   Differential-Continous_ISR.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6784	     24	   1748	   8556	   216c	Differential-Continous_ISR.elf
+Finished building: default.size.stdout
+ 
+16:47:50 **** Incremental Build of configuration Debug for project Differential-Continous_ISR ****
+make all 
+arm-none-eabi-size   Differential-Continous_ISR.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6784	     24	   1748	   8556	   216c	Differential-Continous_ISR.elf
+Finished building: default.size.stdout
+ 
+16:49:39 **** Incremental Build of configuration Debug for project Differential-Continous_ISR ****
+make all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:525:9: warning: unused variable 'values_DIFF_CONT' [-Wunused-variable]
+   float values_DIFF_CONT [num_measure_DIFF_CONT];
+         ^~~~~~~~~~~~~~~~
+../Src/main.c:494:21: warning: unused variable 'sysclock' [-Wunused-variable]
+   volatile uint32_t sysclock = SystemCoreClock;
+                     ^~~~~~~~
+arm-none-eabi-gcc -o "Differential-Continous_ISR.elf" @"objects.list"   -mcpu=cortex-m4 -T"../STM32F407VG_FLASH.ld" --specs=nosys.specs -Wl,-Map="Differential-Continous_ISR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Differential-Continous_ISR.elf
+ 
+make --no-print-directory post-build
+arm-none-eabi-objcopy.exe -O ihex "Differential-Continous_ISR.elf" "Differential-Continous_ISR.hex"
+ 
+arm-none-eabi-size   Differential-Continous_ISR.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6784	     24	   1748	   8556	   216c	Differential-Continous_ISR.elf
+Finished building: default.size.stdout
+ 
+arm-none-eabi-objdump -h -S  Differential-Continous_ISR.elf  > "Differential-Continous_ISR.list"
+Finished building: Differential-Continous_ISR.list
+ 
+16:51:37 **** Incremental Build of configuration Debug for project Differential-Continous_ISR ****
+make all 
+arm-none-eabi-size   Differential-Continous_ISR.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6784	     24	   1748	   8556	   216c	Differential-Continous_ISR.elf
+Finished building: default.size.stdout
+ 
+16:58:01 **** Incremental Build of configuration Debug for project Differential-Continous_ISR ****
+make all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:525:9: warning: unused variable 'values_DIFF_CONT' [-Wunused-variable]
+   float values_DIFF_CONT [num_measure_DIFF_CONT];
+         ^~~~~~~~~~~~~~~~
+../Src/main.c:494:21: warning: unused variable 'sysclock' [-Wunused-variable]
+   volatile uint32_t sysclock = SystemCoreClock;
+                     ^~~~~~~~
+arm-none-eabi-gcc -o "Differential-Continous_ISR.elf" @"objects.list"   -mcpu=cortex-m4 -T"../STM32F407VG_FLASH.ld" --specs=nosys.specs -Wl,-Map="Differential-Continous_ISR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Differential-Continous_ISR.elf
+ 
+make --no-print-directory post-build
+arm-none-eabi-objcopy.exe -O ihex "Differential-Continous_ISR.elf" "Differential-Continous_ISR.hex"
+ 
+arm-none-eabi-size   Differential-Continous_ISR.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6776	     24	   1748	   8548	   2164	Differential-Continous_ISR.elf
+Finished building: default.size.stdout
+ 
+arm-none-eabi-objdump -h -S  Differential-Continous_ISR.elf  > "Differential-Continous_ISR.list"
+Finished building: Differential-Continous_ISR.list
+ 
+17:08:59 **** Incremental Build of configuration Debug for project Differential-Continous_ISR ****
+make all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:525:9: warning: unused variable 'values_DIFF_CONT' [-Wunused-variable]
+   float values_DIFF_CONT [num_measure_DIFF_CONT];
+         ^~~~~~~~~~~~~~~~
+../Src/main.c:494:21: warning: unused variable 'sysclock' [-Wunused-variable]
+   volatile uint32_t sysclock = SystemCoreClock;
+                     ^~~~~~~~
+arm-none-eabi-gcc -o "Differential-Continous_ISR.elf" @"objects.list"   -mcpu=cortex-m4 -T"../STM32F407VG_FLASH.ld" --specs=nosys.specs -Wl,-Map="Differential-Continous_ISR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Differential-Continous_ISR.elf
+ 
+make --no-print-directory post-build
+arm-none-eabi-objcopy.exe -O ihex "Differential-Continous_ISR.elf" "Differential-Continous_ISR.hex"
+ 
+arm-none-eabi-size   Differential-Continous_ISR.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6776	     24	   1748	   8548	   2164	Differential-Continous_ISR.elf
+Finished building: default.size.stdout
+ 
+arm-none-eabi-objdump -h -S  Differential-Continous_ISR.elf  > "Differential-Continous_ISR.list"
+Finished building: Differential-Continous_ISR.list
+ 
+17:12:23 **** Incremental Build of configuration Debug for project Differential-Continous_ISR ****
+make all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:525:9: warning: unused variable 'values_DIFF_CONT' [-Wunused-variable]
+   float values_DIFF_CONT [num_measure_DIFF_CONT];
+         ^~~~~~~~~~~~~~~~
+../Src/main.c:494:21: warning: unused variable 'sysclock' [-Wunused-variable]
+   volatile uint32_t sysclock = SystemCoreClock;
+                     ^~~~~~~~
+arm-none-eabi-gcc -o "Differential-Continous_ISR.elf" @"objects.list"   -mcpu=cortex-m4 -T"../STM32F407VG_FLASH.ld" --specs=nosys.specs -Wl,-Map="Differential-Continous_ISR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Differential-Continous_ISR.elf
+ 
+make --no-print-directory post-build
+arm-none-eabi-objcopy.exe -O ihex "Differential-Continous_ISR.elf" "Differential-Continous_ISR.hex"
+ 
+arm-none-eabi-size   Differential-Continous_ISR.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6776	     24	   1748	   8548	   2164	Differential-Continous_ISR.elf
+Finished building: default.size.stdout
+ 
+arm-none-eabi-objdump -h -S  Differential-Continous_ISR.elf  > "Differential-Continous_ISR.list"
+Finished building: Differential-Continous_ISR.list
+ 

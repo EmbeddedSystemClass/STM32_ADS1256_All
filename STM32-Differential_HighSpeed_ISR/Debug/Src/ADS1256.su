@@ -1,0 +1,11 @@
+ADS1256.c:23:6:setDIFFChannel	16	static
+ADS1256.c:37:6:writeCMD	24	static
+ADS1256.c:54:6:setDataRate	16	static
+ADS1256.c:67:6:writeByteToReg	24	static
+ADS1256.c:91:6:setPGA	16	static
+ADS1256.c:103:6:send8bit	16	static
+ADS1256.c:115:6:waitDRDY	16	static
+ADS1256.c:132:9:readChipID	16	static
+ADS1256.c:147:9:receive8bit	24	static
+ADS1256.c:175:9:readByteFromReg	24	static
+ADS1256.c:196:6:setBuffer	16	static
