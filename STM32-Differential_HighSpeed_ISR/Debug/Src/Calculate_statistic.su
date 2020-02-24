@@ -1,3 +1,8 @@
 Calculate_statistic.c:4:7:Calculate_max	56	static
 Calculate_statistic.c:26:7:Calculate_FreqMax	40	static
-Calculate_statistic.c:60:7:Calculate_3timesFeatureAverage	8	static
+Calculate_statistic.c:64:7:CalcluateMean	24	static
+Calculate_statistic.c:74:7:CalcluateMoment	56	static
+Calculate_statistic.c:84:7:CalcluateVariance	32	static
+Calculate_statistic.c:97:7:CalcluateStandardDeviation	24	static
+Calculate_statistic.c:102:7:Calculate_skewness	48	static
+Calculate_statistic.c:113:7:Calculate_kurtosis	32	static

@@ -56,9 +56,71 @@ float Calculate_FreqMax(float *data, int freqSettingValue, int8_t freq_index)
 
 }
 
-
-float Calculate_3timesFeatureAverage(Sv data)
+/*
+ *
+ * Calculate Skewness & kurtosis
+ *
+ * */
+float CalcluateMean(float *x, int n)
 {
+	float sum = 0;
 
-	return 1;
+	for (int i = 0; i < n; i++)
+		sum += x[i];
+
+	return sum / n;
 }
+
+float CalcluateMoment(float *x, int n, int m)
+{
+	float mean = CalcluateMean(x, n), sum = 0;
+
+	for (int i = 0; i < n; i++)
+		sum += pow(x[i] - mean, m);
+
+	return sum / n;
+}
+
+float CalcluateVariance(float *x, int n)
+{
+	float mean = CalcluateMean(x, n), sumSq = 0;
+
+	for (int i = 0; i < n; i++)
+	{
+		float delta = x[i] - mean;
+
+		sumSq += delta * delta;
+	}
+
+	return sumSq / (n - 1);
+}
+float CalcluateStandardDeviation(float *x, int n)
+{
+	return sqrt(CalcluateVariance(x, n));
+}
+
+float Calculate_skewness(float *x, int n)
+{
+	// NIST definition of adjusted Fisher-Pearson
+	// coefficient of skewness
+	float m3 = CalcluateMoment(x, n, 3);
+	float sx = CalcluateStandardDeviation(x, n);
+	int n1 = n - 1;
+	float Skewness = (sqrt(n * n1) / n1) * m3 / pow(sx, 3);
+
+	return Skewness;
+}
+float Calculate_kurtosis(float *x, int n)
+{
+	float m2 = CalcluateMoment(x, n, 2);
+	float m4 = CalcluateMoment(x, n, 4);
+
+
+	float Kurtosis = m4 / (m2 * m2) - 3.0;
+    return Kurtosis;
+}
+
+
+
+
+

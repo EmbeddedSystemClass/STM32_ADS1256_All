@@ -65,7 +65,7 @@ extern DMA_HandleTypeDef hdma_spi1_tx;
 extern DMA_HandleTypeDef hdma_usart6_tx;
 extern UART_HandleTypeDef huart6;
 /* USER CODE BEGIN EV */
-extern uint8_t buffer[2];
+extern uint8_t I2cbuffer[2];
 uint8_t i2cSendBuffer[10] = {1,2,3,4,5,6,7,8,9,10};
 /* USER CODE END EV */
 
@@ -227,7 +227,7 @@ void I2C1_ER_IRQHandler(void)
   /* USER CODE END I2C1_ER_IRQn 0 */
   HAL_I2C_ER_IRQHandler(&hi2c1);
   /* USER CODE BEGIN I2C1_ER_IRQn 1 */
-  HAL_I2C_Slave_Receive_IT(&hi2c1, buffer, 2);
+  HAL_I2C_Slave_Receive_IT(&hi2c1, I2cbuffer, 2);
   /* USER CODE END I2C1_ER_IRQn 1 */
 }
 

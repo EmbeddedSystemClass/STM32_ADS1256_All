@@ -29,8 +29,9 @@
 #include "arm_const_structs.h"
 #include "arm_math.h"
 #include "ADS1256.h"
-#include "printf.h"
 #include "BLE_USART.h"
+
+
 //#include "fft_self.h"
 /* USER CODE END Includes */
 
@@ -85,8 +86,8 @@ struct I2cCommunication
 } I2cC;
 
 
-uint8_t buffer[3];
-uint8_t pData[10] = {1,2,3,4,5,6,7,8,9,10};
+uint8_t I2cbuffer[3];
+
 
 union FLOAT_BYTE
 {
@@ -257,10 +258,7 @@ int main(void)
   ADS1256.data_length = 4096;
 
   //Initialize Frequency range to collection to feature
-  F2B.f = 1.4567;
-
-
-
+  //F2B.f = 1.4567;
 
   //Initialize delay systick
   delay_init(122);
@@ -458,7 +456,7 @@ static void MX_I2C1_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN I2C1_Init 2 */
-  HAL_I2C_Slave_Receive_IT(&hi2c1, buffer, 2);
+  HAL_I2C_Slave_Receive_IT(&hi2c1, I2cbuffer, 2);
   /* USER CODE END I2C1_Init 2 */
 
 }
@@ -658,7 +656,7 @@ void I2C1_EV_IRQHandler(void)
   /* USER CODE BEGIN I2C1_EV_IRQn 1 */
 
     //if(buffer[0] == 0x50 && buffer[1] == 0x30)
-    switch(buffer[0])
+    switch(I2cbuffer[0])
     {
     	case 0x01:
     		F2B.f = statistic_value.Statistic_FreqOvall;
@@ -815,7 +813,7 @@ void I2C1_EV_IRQHandler(void)
 
 
 
-    HAL_I2C_Slave_Receive_IT(&hi2c1, buffer, 2);
+    HAL_I2C_Slave_Receive_IT(&hi2c1, I2cbuffer, 2);
   /* USER CODE END I2C1_EV_IRQn 1 */
 }
 
@@ -962,7 +960,11 @@ void FFT_Thread(void const * argument)
 				}
 
 
-				/*Calcluate math function*/
+
+
+
+
+				/*Calculate math function*/
 				arm_max_f32(statisticDataSet, dataLength, &statistic_value.Statistic_max, &maxtestIndex);
 				arm_min_f32(statisticDataSet, dataLength, &statistic_value.Statistic_min, &mintestIndex);
 				arm_var_f32(statisticDataSet, dataLength, &statistic_value.Statistic_var);
@@ -972,7 +974,11 @@ void FFT_Thread(void const * argument)
 				arm_rms_f32(testOutput, dataLength, &statistic_value.Statistic_FreqOvall);
 				statistic_value.Statistic_crestFactor = statistic_value.Statistic_max/statistic_value.Statistic_rms;
 
+				/*Calculate skewness and kurtosis will cause delay*/
+				//statistic_value.Statistic_kurtosis = Calculate_kurtosis(statisticDataSet, dataLength);
+				//statistic_value.Statistic_skewness = Calculate_skewness(statisticDataSet, dataLength);
 
+				/*to calculate 3 times moving average*/
 				averageTimes++;
 				if(averageTimes == 1)
 				{
@@ -984,6 +990,7 @@ void FFT_Thread(void const * argument)
 					statistic_value.Statistic_std_Temp = statistic_value.Statistic_std;
 					statistic_value.Statistic_FreqOvall_Temp = statistic_value.Statistic_FreqOvall;
 					statistic_value.Statistic_crestFactor_Temp = statistic_value.Statistic_crestFactor;
+					statistic_value.Statistic_kurtosis_Temp = statistic_value.Statistic_crestFactor;
 
 				}
 				if(averageTimes == 2)

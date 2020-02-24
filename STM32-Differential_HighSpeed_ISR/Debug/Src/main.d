@@ -45,9 +45,9 @@ Src/main.o: ../Src/main.c ../Inc/main.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h \
- ../Src/Delay.h ../Src/Calculate_statistic.h ../Src/arm_math.h \
- ../Inc/arm_const_structs.h ../Inc/arm_math.h ../Inc/arm_common_tables.h \
- ../Src/ADS1256.h ../Src/printf.h ../Src/BLE_USART.h
+ ../Inc/Delay.h ../Inc/Calculate_statistic.h ../Inc/arm_math.h \
+ ../Inc/arm_const_structs.h ../Inc/arm_common_tables.h ../Inc/arm_math.h \
+ ../Inc/ADS1256.h ../Inc/main.h ../Inc/Delay.h ../Inc/BLE_USART.h
 
 ../Inc/main.h:
 
@@ -143,20 +143,22 @@ Src/main.o: ../Src/main.c ../Inc/main.h \
 
 ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h:
 
-../Src/Delay.h:
+../Inc/Delay.h:
 
-../Src/Calculate_statistic.h:
-
-../Src/arm_math.h:
-
-../Inc/arm_const_structs.h:
+../Inc/Calculate_statistic.h:
 
 ../Inc/arm_math.h:
 
+../Inc/arm_const_structs.h:
+
 ../Inc/arm_common_tables.h:
 
-../Src/ADS1256.h:
+../Inc/arm_math.h:
 
-../Src/printf.h:
+../Inc/ADS1256.h:
 
-../Src/BLE_USART.h:
+../Inc/main.h:
+
+../Inc/Delay.h:
+
+../Inc/BLE_USART.h:
