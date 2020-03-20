@@ -37,7 +37,7 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-#define TEST_LENGTH_SAMPLES 8192
+#define FFT_LENGTH_SAMPLES 8192
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -207,7 +207,7 @@ void writeIICEEPROM_2402C(uint8_t *data)
 
 
 //extern float32_t testInput_f32_10khz[TEST_LENGTH_SAMPLES];
-float32_t testOutput[TEST_LENGTH_SAMPLES/2];
+float32_t testOutput[FFT_LENGTH_SAMPLES/2];
 float *dataRecive[4096];
 float *xdatatoSend = ADS1256.data_buffer;
 float FFTdata[8192];
@@ -948,21 +948,19 @@ void FFT_Thread(void const * argument)
 				arm_max_f32(testOutput, fftSize, &maxValue, &testIndex);
 				FFT_COUINT++;
 
-				maxValue = maxValue/4096;
+				maxValue = maxValue*2 / 4096;
 				for(int i =0; i<2048; i++)
 				{
-					testOutput[i] = testOutput[i]/4096;
+					testOutput[i] = (testOutput[i]*2)/4096;
 				}
 
+
+/* focus broad band functionality
 				for(int i =0; i<14; i++)
 				{
 					Calculate_FreqMax(testOutput,*((&freq_settingValue.freq1)+i), i);
 				}
-
-
-
-
-
+*/
 
 				/*Calculate math function*/
 				arm_max_f32(statisticDataSet, dataLength, &statistic_value.Statistic_max, &maxtestIndex);

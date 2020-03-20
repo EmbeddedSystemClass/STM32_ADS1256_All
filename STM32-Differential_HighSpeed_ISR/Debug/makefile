@@ -54,8 +54,8 @@ Differential_HighSpeed_ISR.bin \
 all: Differential_HighSpeed_ISR.elf secondary-outputs
 
 # Tool invocations
-Differential_HighSpeed_ISR.elf: $(OBJS) $(USER_OBJS) C:\Users\user\Downloads\STM32_ADS1256_All-master\STM32_ADS1256_All-master\STM32-Differential_HighSpeed_ISR\STM32F407VGTX_FLASH.ld
-	arm-none-eabi-gcc -o "Differential_HighSpeed_ISR.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\user\Downloads\STM32_ADS1256_All-master\STM32_ADS1256_All-master\STM32-Differential_HighSpeed_ISR\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Differential_HighSpeed_ISR.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Differential_HighSpeed_ISR.elf: $(OBJS) $(USER_OBJS) C:\Users\user\Downloads\STM32_ADS1256_All\STM32-Differential_HighSpeed_ISR\STM32F407VGTX_FLASH.ld
+	arm-none-eabi-gcc -o "Differential_HighSpeed_ISR.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\user\Downloads\STM32_ADS1256_All\STM32-Differential_HighSpeed_ISR\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Differential_HighSpeed_ISR.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
