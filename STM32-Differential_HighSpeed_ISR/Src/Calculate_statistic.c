@@ -1,6 +1,23 @@
 #include "Calculate_statistic.h"
 
 
+
+float Calculate_rms(float *data, int n)
+{
+	float32_t rmsAns = 0;
+	float32_t * ans = &rmsAns;
+	float32_t sum = 0;
+
+	for (int i = 0; i < n; i++)
+		sum += data[i]*data[i];
+
+	sum = sum / n;
+	arm_sqrt_f32(sum, ans);
+
+
+	return *ans;
+}
+
 float Calculate_max(float *data)
 {
 	float max= 0;
@@ -55,6 +72,8 @@ float Calculate_FreqMax(float *data, int freqSettingValue, int8_t freq_index)
 	}
 
 }
+
+
 
 /*
  *
@@ -118,6 +137,20 @@ float Calculate_kurtosis(float *x, int n)
 
 	float Kurtosis = m4 / (m2 * m2) - 3.0;
     return Kurtosis;
+}
+
+float Calculate_FreqOverAll(float *x, int n)
+{
+	float ParsevalFftPower = 0;
+	float ans = 0;
+	for(int i = 0; i<n; i++)
+	{
+		//FFTRMSArray[i] = (testOutput[i]*2)/4096;
+		ParsevalFftPower += x[i] * x[i];
+	}
+
+	ans = sqrt(ParsevalFftPower)/n;
+	return ans;
 }
 
 

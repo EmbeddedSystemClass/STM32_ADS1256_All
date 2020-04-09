@@ -28,8 +28,8 @@ Src/BLE_USART.o: ../Src/BLE_USART.c ../Inc/main.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
- ../Src/BLE_USART.h ../Src/printf.h ../Src/Calculate_statistic.h \
- ../Src/arm_math.h
+ ../Inc/BLE_USART.h ../Src/printf.h ../Inc/Calculate_statistic.h \
+ ../Inc/arm_math.h
 
 ../Inc/main.h:
 
@@ -91,10 +91,10 @@ Src/BLE_USART.o: ../Src/BLE_USART.c ../Inc/main.h \
 
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
 
-../Src/BLE_USART.h:
+../Inc/BLE_USART.h:
 
 ../Src/printf.h:
 
-../Src/Calculate_statistic.h:
+../Inc/Calculate_statistic.h:
 
-../Src/arm_math.h:
+../Inc/arm_math.h:

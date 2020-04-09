@@ -212,6 +212,8 @@ float *dataRecive[4096];
 float *xdatatoSend = ADS1256.data_buffer;
 float FFTdata[8192];
 float rawData[4096];
+
+
 /* USER CODE END 0 */
 
 /**
@@ -255,7 +257,7 @@ int main(void)
 
   //Initialize ADS1256 data buffer size
   ADS1256.data_index = 0;
-  ADS1256.data_length = 4096;
+  ADS1256.data_length = dataLength;
 
   //Initialize Frequency range to collection to feature
   //F2B.f = 1.4567;
@@ -926,7 +928,7 @@ void FFT_Thread(void const * argument)
 			  xStatus = xQueueReceive(adcQueueHandle, &dataRecive, 100);
 			  queueCount = uxQueueMessagesWaiting(adcQueueHandle);
 
-			for(uint32_t i = 0; i<4096; i++)
+			for(uint32_t i = 0; i<dataLength; i++)
 			{
 				//recivedata5 = *(dataRecive[0]+i);
 				rawData[i]=*(dataRecive[0]+i);
@@ -946,30 +948,34 @@ void FFT_Thread(void const * argument)
 
 				/* Calculates maxValue and returns corresponding BIN value */
 				arm_max_f32(testOutput, fftSize, &maxValue, &testIndex);
-				FFT_COUINT++;
 
-				maxValue = maxValue*2 / 4096;
-				for(int i =0; i<2048; i++)
-				{
-					testOutput[i] = (testOutput[i]*2)/4096;
-				}
+			     /*
+				 * the testOutput in python  ==> testOutput = yf = abs(fft(signal = testInput_f32_10khz))
+				 * so we can make a new array like yf2 = 2/N * np.abs(yf[0:N//2]); in python
+				 * It kindly would be
+				 *  testOutput[] = 2/N * testOutput[0:N/2]
+				 *
+				 * */
+
+				maxValue = maxValue*2 / dataLength;
 
 
-/* focus broad band functionality
+
+				/* focus broad band functionality
 				for(int i =0; i<14; i++)
 				{
 					Calculate_FreqMax(testOutput,*((&freq_settingValue.freq1)+i), i);
 				}
-*/
+				 */
 
 				/*Calculate math function*/
+				statistic_value.Statistic_FreqOvall = Calculate_FreqOverAll(testOutput, dataLength);
 				arm_max_f32(statisticDataSet, dataLength, &statistic_value.Statistic_max, &maxtestIndex);
 				arm_min_f32(statisticDataSet, dataLength, &statistic_value.Statistic_min, &mintestIndex);
 				arm_var_f32(statisticDataSet, dataLength, &statistic_value.Statistic_var);
 				arm_rms_f32(statisticDataSet, dataLength, &statistic_value.Statistic_rms);
 				arm_mean_f32(statisticDataSet, dataLength, &statistic_value.Statistic_mean);
 				arm_std_f32(statisticDataSet, dataLength, &statistic_value.Statistic_std);
-				arm_rms_f32(testOutput, dataLength, &statistic_value.Statistic_FreqOvall);
 				statistic_value.Statistic_crestFactor = statistic_value.Statistic_max/statistic_value.Statistic_rms;
 
 				/*Calculate skewness and kurtosis will cause delay*/
@@ -1027,7 +1033,6 @@ void FFT_Thread(void const * argument)
 					BLE_USART(&huart6, &statistic_value);
 
 				}
-
 
 				//snprintf_(bb,20, "%.3f Pa", statistic_value.Statistic_max);
 

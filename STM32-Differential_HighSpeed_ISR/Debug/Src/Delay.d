@@ -1,4 +1,4 @@
-Src/Delay.o: ../Src/Delay.c ../Src/Delay.h \
+Src/Delay.o: ../Src/Delay.c ../Inc/Delay.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../Inc/stm32f4xx_hal_conf.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
@@ -29,7 +29,7 @@ Src/Delay.o: ../Src/Delay.c ../Src/Delay.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 
-../Src/Delay.h:
+../Inc/Delay.h:
 
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 

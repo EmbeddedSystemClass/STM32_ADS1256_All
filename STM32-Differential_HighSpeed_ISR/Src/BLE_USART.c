@@ -3,6 +3,7 @@
 #include "string.h"
 #include "math.h"
 #include "BLE_USART.h"
+#include <stdint.h>
 #include "printf.h"
 #include "Calculate_statistic.h"
 
@@ -19,9 +20,9 @@ void BLE_USART(UART_HandleTypeDef *huart, Sv *sendpData )
 		USARTBLE.bufferSize = min_(APP_BUFFER_SIZE, strlen(USARTBLE.buffer));
 
 
-		snprintf_(USARTBLE.buffer, 128 , "%.4f,%.4f,%.4f,%.4f,%.4f,%.4f,%.4f,%.4f", sendpData->Statistic_FreqOvall,
+		snprintf_(USARTBLE.buffer, 128 , "%.4f,%.4f,%.4f,%.4f,%.4f,%.4f,%.4f", sendpData->Statistic_FreqOvall,
 				sendpData->Statistic_max,sendpData->Statistic_min,sendpData->Statistic_var,sendpData->Statistic_rms,
-				sendpData->Statistic_mean,sendpData->Statistic_std, sendpData->Statistic_crestFactor);
+				sendpData->Statistic_mean, sendpData->Statistic_crestFactor);
 		USARTBLE.sendTimeout = 100 ;
 		if(HAL_UART_Transmit_DMA(huart, USARTBLE.buffer, USARTBLE.bufferSize)==HAL_OK)
 		{
