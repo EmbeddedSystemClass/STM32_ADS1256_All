@@ -12,29 +12,32 @@ float Calculate_FreqOverAll(float *data, int n);
 
 typedef struct Statistic_value
 {
-	float Statistic_max;
-	float Statistic_min;
-	float Statistic_var;
-	float Statistic_rms;
-	float Statistic_mean;
-	float Statistic_std;
-	float Statistic_crestFactor;
-	float Statistic_kurtosis;
-	float Statistic_skewness;
-	float Statistic_FreqOvall;
-	float Statistic_FreqPeak[20];
+	float32_t Statistic_max;
+	float32_t Statistic_min;
+	float32_t Statistic_var;
+	float32_t Statistic_rms;
+	float32_t Statistic_mean;
+	float32_t Statistic_std;
+	float32_t Statistic_crestFactor;
+	float32_t Statistic_kurtosis;
+	float32_t Statistic_skewness;
+	float32_t Statistic_FreqOvall;
+	float32_t Statistic_FreqPeak[20];
+	float32_t Statistic_p2p;
+	float32_t Statistic_SpeedOvall;
 
-
-	float Statistic_max_Temp;
-	float Statistic_min_Temp;
-	float Statistic_var_Temp;
-	float Statistic_rms_Temp;
-	float Statistic_mean_Temp;
-	float Statistic_std_Temp;
-	float Statistic_crestFactor_Temp;
-	float Statistic_kurtosis_Temp;
-	float Statistic_skewness_Temp;
-	float Statistic_FreqOvall_Temp;
+	float32_t Statistic_max_Temp;
+	float32_t Statistic_min_Temp;
+	float32_t Statistic_var_Temp;
+	float32_t Statistic_rms_Temp;
+	float32_t Statistic_mean_Temp;
+	float32_t Statistic_std_Temp;
+	float32_t Statistic_crestFactor_Temp;
+	float32_t Statistic_kurtosis_Temp;
+	float32_t Statistic_skewness_Temp;
+	float32_t Statistic_FreqOvall_Temp;
+	float32_t Statistic_p2p_Temp;
+	float32_t Statistic_SpeedOvall_Temp;
 
 }Sv;
 

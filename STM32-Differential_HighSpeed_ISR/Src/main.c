@@ -30,7 +30,7 @@
 #include "arm_math.h"
 #include "ADS1256.h"
 #include "BLE_USART.h"
-
+#include "stdlib.h"
 
 //#include "fft_self.h"
 /* USER CODE END Includes */
@@ -135,7 +135,7 @@ float32_t *statisticDataSet;
 uint32_t maxtestIndex = 0;
 uint32_t mintestIndex = 0;
 uint32_t dataLength = 0;
-
+uint8_t frequencyScale = 0;
 
 //IIC EEPROM 2402C
 uint8_t WriteBufferEEPROM[BufferSize],ReadBufferEEPROM[BufferSize];
@@ -276,6 +276,7 @@ int main(void)
   setBuffer();
   setPGA(PGA_GAIN1);
   setDataRate(DRATE_15000);
+  frequencyScale = 15000 / fftSize;
 
   //Read chip id
   id = readChipID();
@@ -928,17 +929,20 @@ void FFT_Thread(void const * argument)
 			  xStatus = xQueueReceive(adcQueueHandle, &dataRecive, 100);
 			  queueCount = uxQueueMessagesWaiting(adcQueueHandle);
 
+
 			for(uint32_t i = 0; i<dataLength; i++)
 			{
 				//recivedata5 = *(dataRecive[0]+i);
 				rawData[i]=*(dataRecive[0]+i);
 				FFTdata[i*2] = *(dataRecive[0]+i);
 				FFTdata[i*2+1] = 0;
+
 			}
 
 			if(xStatus == pdPASS)
 			{
 
+				float32_t Speeddatabuffer[fftSize];
 				/* Process the data through the CFFT/CIFFT module */
 				arm_cfft_f32(&arm_cfft_sR_f32_len4096, FFTdata, ifftFlag, doBitReverse);
 
@@ -956,9 +960,33 @@ void FFT_Thread(void const * argument)
 				 *  testOutput[] = 2/N * testOutput[0:N/2]
 				 *
 				 * */
+				for(uint16_t i = 0; i < fftSize; i++)
+				{
+					Speeddatabuffer[i] = testOutput[i];
+				}
 
 				maxValue = maxValue*2 / dataLength;
 
+				for(uint16_t i = 1; i < fftSize; i++)
+				{
+					if(i < fftSize/2)
+					{
+						if(i ==0)
+						{
+							Speeddatabuffer[i] = Speeddatabuffer[i];
+						}
+						else
+						{
+							Speeddatabuffer[i] = (Speeddatabuffer[i] * 9807) / (2 * 3.1415926 * frequencyScale * i);
+						}
+
+					}
+					else if(i > fftSize/2)
+					{
+						Speeddatabuffer[i] = (Speeddatabuffer[i] * 9807) / (2 * 3.1415926 * frequencyScale * abs(fftSize-i));
+					}
+
+				}
 
 
 				/* focus broad band functionality
@@ -969,6 +997,7 @@ void FFT_Thread(void const * argument)
 				 */
 
 				/*Calculate math function*/
+				statistic_value.Statistic_SpeedOvall = Calculate_FreqOverAll(Speeddatabuffer, dataLength);
 				statistic_value.Statistic_FreqOvall = Calculate_FreqOverAll(testOutput, dataLength);
 				arm_max_f32(statisticDataSet, dataLength, &statistic_value.Statistic_max, &maxtestIndex);
 				arm_min_f32(statisticDataSet, dataLength, &statistic_value.Statistic_min, &mintestIndex);
@@ -977,7 +1006,7 @@ void FFT_Thread(void const * argument)
 				arm_mean_f32(statisticDataSet, dataLength, &statistic_value.Statistic_mean);
 				arm_std_f32(statisticDataSet, dataLength, &statistic_value.Statistic_std);
 				statistic_value.Statistic_crestFactor = statistic_value.Statistic_max/statistic_value.Statistic_rms;
-
+				statistic_value.Statistic_p2p = statistic_value.Statistic_max - statistic_value.Statistic_min;
 				/*Calculate skewness and kurtosis will cause delay*/
 				//statistic_value.Statistic_kurtosis = Calculate_kurtosis(statisticDataSet, dataLength);
 				//statistic_value.Statistic_skewness = Calculate_skewness(statisticDataSet, dataLength);
@@ -995,6 +1024,8 @@ void FFT_Thread(void const * argument)
 					statistic_value.Statistic_FreqOvall_Temp = statistic_value.Statistic_FreqOvall;
 					statistic_value.Statistic_crestFactor_Temp = statistic_value.Statistic_crestFactor;
 					statistic_value.Statistic_kurtosis_Temp = statistic_value.Statistic_crestFactor;
+					statistic_value.Statistic_SpeedOvall_Temp = statistic_value.Statistic_SpeedOvall;
+					statistic_value.Statistic_p2p_Temp = statistic_value.Statistic_p2p;
 
 				}
 				if(averageTimes == 2)
@@ -1007,6 +1038,8 @@ void FFT_Thread(void const * argument)
 					statistic_value.Statistic_std_Temp += statistic_value.Statistic_std;
 					statistic_value.Statistic_FreqOvall_Temp += statistic_value.Statistic_FreqOvall;
 					statistic_value.Statistic_crestFactor_Temp += statistic_value.Statistic_crestFactor;
+					statistic_value.Statistic_SpeedOvall_Temp += statistic_value.Statistic_SpeedOvall;
+					statistic_value.Statistic_p2p_Temp += statistic_value.Statistic_p2p;
 
 				}
 				if(averageTimes == 3)
@@ -1027,6 +1060,10 @@ void FFT_Thread(void const * argument)
 							statistic_value.Statistic_FreqOvall) / 3;
 					statistic_value.Statistic_crestFactor = (statistic_value.Statistic_crestFactor_Temp +
 							statistic_value.Statistic_crestFactor) / 3;
+					statistic_value.Statistic_SpeedOvall = (statistic_value.Statistic_SpeedOvall_Temp +
+							statistic_value.Statistic_SpeedOvall) / 3;
+					statistic_value.Statistic_p2p = (statistic_value.Statistic_p2p_Temp +
+							statistic_value.Statistic_p2p) / 3;
 
 					USARTBLE.sendflag = 1;
 					averageTimes = 0;
